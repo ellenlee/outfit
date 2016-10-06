@@ -6,5 +6,9 @@ Rails.application.routes.draw do
   resources :photos
   # get "welcome#v1"
 
+  namespace :admin do
+  	
+  end
+
 
 end

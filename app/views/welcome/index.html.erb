@@ -1,36 +1,30 @@
 
-
-<div style="text-align: center">
-	
-<br><br><br><br>
-	<section id="main">
-		<div style="text-align: center">
-			<p>有任何衣服不知如何穿搭嗎？</p>
-			<p>我們幫你找！</p>
-		</div>
-	</section>
-<br><br>
-	<section>
-		<div id="photo_upload" style="border: solid 1px #ccc; width: 40%;display: inline-block;">
-			在這裡上傳照片
-			<br>
-			<br>
-			<%= form_for @photo, html: { multipart: true } do |form| %>
-			  <%= form.file_field :img %>
-			  <%= submit_tag  "送出" %>
-			<% end %>
-			<br><br><br>
-		</div>
-		<div id="photo_upload" style="border: solid 1px #ccc; width: 40%; display: inline-block;">
-			在這裡顯示照片
-			<br><br><br><br><br>
-		</div>
-	</section>
-	<br>
-	<br>	
-	<section style="text-align: center">
-		<input type="email" id="exampleInputEmail1" placeholder="Email">
+<div id="rwd-frame">
+	<div id="main">
 		
-	</section>
+		<section id="message">
+			<p class="text-center">
+				自在、亮麗<br>
+				從選對衣服開始
+			</p>
+		</section>
 
+		<section class="upload">
+			<div id="file-bar" class="text-center">
+				<%= form_for @photo, html: { multipart: true } do |f| %>
+					<div class="middle">
+						<p>上傳您想搭配的衣物</p>
+					  <%= f.file_field :img %>
+					  <br><br>
+				  	<%= f.submit  "送出", class: "btn btn-warning" %>
+						<div class="bg-block col-xs-12"></div>
+					</div>
+				<% end %>
+			</div>
+		</section>
+
+	</div>
 </div>
+
+
+

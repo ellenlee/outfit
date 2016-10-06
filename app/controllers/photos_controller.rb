@@ -4,7 +4,6 @@ class PhotosController < ApplicationController
 		@photo = Photo.new(photo_params)
 		if @photo.save
 			redirect_to :root, notice: "感謝您的上傳！"
-			
 		end
 	end
 
