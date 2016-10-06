@@ -3,7 +3,7 @@ lock '3.6.1'
 `ssh-add`
 
 set :application, 'outfit'
-set :repo_url, 'git@github.com:ellenlee/outfit-hunt.git'
+set :repo_url, 'git@github.com:ellenlee/outfit.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
