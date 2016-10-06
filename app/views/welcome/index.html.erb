@@ -10,8 +10,10 @@
 		</section>
 
 		<section class="upload">
-			<div id="file-bar" class="text-center">
-				<%= form_for @photo, html: { multipart: true } do |f| %>
+			<div id="content" class="text-center">
+				<%= form_for @photo do |f| %>
+					<%= render partial: 'form_errors', locals: { :f => f } %>
+					<div id="photo_upload"></div>
 					<div class="middle">
 						<p>上傳您想搭配的衣物</p>
 					  <%= f.file_field :img %>
@@ -19,6 +21,7 @@
 				  	<%= f.submit  "送出", class: "btn btn-warning" %>
 						<div class="bg-block col-xs-12"></div>
 					</div>
+
 				<% end %>
 			</div>
 		</section>

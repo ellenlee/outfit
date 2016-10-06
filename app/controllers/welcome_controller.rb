@@ -1,6 +1,5 @@
 class WelcomeController < ApplicationController
 	def index
-		@photo = Photo.new
-		
+		@photo = Photo.new		
 	end
 end

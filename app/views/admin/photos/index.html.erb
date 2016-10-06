@@ -1,0 +1,10 @@
+<h1>穿搭服務請求</h1>
+
+<% @photos.each do |photo| %>
+	<div class="outfit-request pull-left">
+		<p><%= image_tag photo.img.url(:medium) %></p>
+		<p>
+			#<%= photo.asker.id %> , 
+			<%= link_to photo.asker.email %></p>
+	</div>
+<% end %>

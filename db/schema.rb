@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161005152244) do
+ActiveRecord::Schema.define(version: 20161006115545) do
 
   create_table "askers", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "ask_count",  default: 0
     t.index ["email"], name: "index_askers_on_email", unique: true
   end
 
@@ -27,6 +28,7 @@ ActiveRecord::Schema.define(version: 20161005152244) do
     t.string   "img_content_type"
     t.integer  "img_file_size"
     t.datetime "img_updated_at"
+    t.integer  "asker_id"
   end
 
   create_table "requests", force: :cascade do |t|

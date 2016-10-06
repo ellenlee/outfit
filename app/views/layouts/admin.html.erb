@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HuntLook</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style>
+    	body {
+				background: image-url("") repeat-y;
+			}
+    </style>
+  </head>
+
+  <body>
+  admin
+    <%= yield %>
+  </body>
+</html>
