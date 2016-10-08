@@ -7,6 +7,10 @@ class PhotosController < ApplicationController
 		end
 	end
 
+	def new
+		@photo = Photo.new
+	end
+
 	def show
 		@photo = Photo.find(params[:id])
 		@asker = Asker.new

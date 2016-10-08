@@ -1,67 +1,11 @@
-
-<div id="rwd-frame">
-	<div id="main">
-		
-		<section id="message" class="hidden">
-			<p class="text-center">
-				自在、亮麗<br>
-				從選對衣服開始
-			</p>
-		</section>
-		
-		<section id="upload-img" class="text-center">
-			<img id="thumbnil" class="hidden" src="" alt="image"/>
-
-			<%= form_for @photo do |f| %>
-				<div id="upload-bar">
-					<%= render partial: 'form_errors', locals: { :f => f } %>
-					<p>您有哪一件衣服想詢問專家？</p>
-						<div class="middle">
-						  <%= f.file_field :img, accept: "image/*",  onchange: "showMyImage(this)" %>
-						  <br><br>
-
-					  	<%= f.submit  "送出", class: "btn btn-warning" %>
-					  	<%= f.submit  "Cancel", id: "cancel", class: "btn btn-danger hidden" %>
-							<div class="bg-block col-xs-12"></div>
-						</div>
-
-				</div>
-			<% end %>
+<h1 id="index-title">OUTFIT HUNT</h1>
 
 
-		</section>
-		
-		<section class="upload">
-			
-		</section>
-
-	</div>
+<div id="welcome-message">
+	<h3 style="margin-bottom: 0px">你的衣櫃裡是不是也有一件</h3>
+	<h2 style="margin-top: 0px">不知該怎麼搭配的衣服？</h2>
+	<h4 style="margin-top: 1em; margin-bottom: 1em">Outfit Hunt 幫你找！</h4>
+	<%= link_to "START", new_photo_path, class: "btn btn-next" %>	
 </div>
-
-<script>
-	function showMyImage(fileInput) {
-        var files = fileInput.files;
-        for (var i = 0; i < files.length; i++) {           
-            var file = files[i];
-            var imageType = /image.*/;     
-            if (!file.type.match(imageType)) {
-                continue;
-            }           
-            var img=document.getElementById("thumbnil");            
-            img.file = file;    
-            var reader = new FileReader();
-            reader.onload = (function(aImg) { 
-                return function(e) { 
-                    aImg.src = e.target.result; 
-                }; 
-            })(img);
-            reader.readAsDataURL(file);
-        }    
-
-        console.log("ddd");
-        $('.middle').toggle('hidden');
-        $('#cancel').toggle('hidden');
-    }
-</script>
 
 
