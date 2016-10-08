@@ -1,0 +1,47 @@
+<h2>1. 上傳衣服照片</h2>
+<%= form_for @photo do |f| %>
+	<div class="center">
+		<div class="img-show" style="display: none">
+			<img id="thumbnil" src="" alt="image"/>
+		</div>
+
+		<div class="img-upload">
+			<%= render partial: 'form_errors', locals: { :f => f } %>
+		  <%= f.file_field :img, accept: "image/*",  onchange: "showMyImage(this)" %>
+		</div>
+		
+	</div>
+		<div class="btn btn-disable">NEXT</div>
+		<%= f.submit "NEXT", class: "btn btn-next", style: "display: none" %>
+		<%= link_to "Cancel", {}, class: "cancel btn btn-default", style: "display: none" %>
+
+<% end %>
+
+<script>
+	function showMyImage(fileInput) {
+    var files = fileInput.files;
+    for (var i = 0; i < files.length; i++) {           
+        var file = files[i];
+        var imageType = /image.*/;     
+        if (!file.type.match(imageType)) {
+            continue;
+        }           
+        var img=document.getElementById("thumbnil");            
+        img.file = file;    
+        var reader = new FileReader();
+        reader.onload = (function(aImg) { 
+            return function(e) { 
+                aImg.src = e.target.result; 
+            }; 
+        })(img);
+        reader.readAsDataURL(file);
+    }    
+
+    console.log("ddd");
+    $('.img-show').toggle('show');
+    $('.img-upload').toggle('hidden');
+    $('.btn-next').toggle('show');
+    $('.cancel').toggle('show');
+    $('.btn-disable').toggle('hidden');
+  }
+</script>
