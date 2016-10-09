@@ -1,0 +1,27 @@
+
+<div id="rwd-frame">
+	<div id="main">
+		
+		<section id="request">
+			<h3 class="text-center" >
+				達人的穿搭建議<br>將會寄至您的信箱
+			</h3>
+		
+			<div id="content" class="text-center">
+				
+
+				<%= form_for @asker do |f| %>
+					<%= hidden_field_tag :photo, @photo.id %>
+					<%= f.email_field :email, placeholder: "enter email" %>
+					<%= f.submit "送出" %>
+				<% end %>
+				<br><br>
+			<%= image_tag @photo.img.url(:medium) %>
+			</div>
+		</section>
+
+	</div>
+</div>
+
+
+

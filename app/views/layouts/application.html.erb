@@ -9,6 +9,12 @@
   </head>
 
   <body id="<%= controller.controller_name %>-<%= controller.action_name %>">
+		<!-- nav -->
+		<nav>
+			<ul class="list-inline pull-right">
+				<li class="btn btn-warning">關於我們</li>
+			</ul>
+		</nav>
 
 	  <!-- 警告訊息 -->
 	  <% if flash[:notice].present? %>

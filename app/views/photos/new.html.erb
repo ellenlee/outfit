@@ -11,9 +11,12 @@
 		</div>
 		
 	</div>
-		<div class="btn btn-disable">NEXT</div>
-		<%= f.submit "NEXT", class: "btn btn-next", style: "display: none" %>
-		<%= link_to "Cancel", {}, class: "cancel btn btn-default", style: "display: none" %>
+  <div class="action">
+    <div class="btn btn-disable">NEXT</div>
+    <%= f.submit "NEXT", class: "btn btn-next", style: "display: none" %>
+    <%= link_to "Cancel", {}, class: "cancel btn btn-default", style: "display: none" %>
+    
+  </div>
 
 <% end %>
 

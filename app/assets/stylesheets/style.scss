@@ -3,12 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-body#welcome-index {
+body {
 	background-image: url('welcome-bg01-1920X1280.png');
 	background-position: center top;
 	background-attachment: fixed;
 	background-size: cover;
-	
+	color: #eee;
 }
 
 .center {
@@ -52,6 +52,11 @@ body#welcome-index {
 	/*display: block;	  */
 	/*margin: auto auto; */
 	/*text-align: center;*/
+}
+
+nav ul {
+	position: absolute; 
+	top:20px; right: 20px;
 }
 
 /* welcome#index */
