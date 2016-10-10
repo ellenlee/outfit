@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161010043908) do
+ActiveRecord::Schema.define(version: 20161010105649) do
 
   create_table "askers", force: :cascade do |t|
     t.string   "name"
@@ -44,7 +44,9 @@ ActiveRecord::Schema.define(version: 20161010043908) do
     t.integer  "photo_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "option_id"
     t.index ["asker_id"], name: "index_requests_on_asker_id"
+    t.index ["option_id"], name: "index_requests_on_option_id"
     t.index ["photo_id"], name: "index_requests_on_photo_id"
   end
 
