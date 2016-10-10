@@ -25,14 +25,14 @@
 			</div>
 			<div class="radio text-left custom_opt", style="display: none">
 				<label style="margin-top: 15px">
-					<%= check_box_tag "note", true, true %>
+					<%= check_box_tag "note", true, false %>
 					<span id="note_of_photo"></span>
 				</label>
 			</div>
 
 		</div>
 		<div class="photo_note">
-			<a class="cancel_note">×</a>
+			<a class="cancel_note btn">×</a>
 			<br>
 			<%= text_area_tag :note, nil, autofocus: true, class: "panel", placeholder: "歡迎寫下任何這件衣服的穿搭問題。
 例如：還可以搭什麼、或是您將出席的場合、偏好的風格等。" %>
@@ -56,39 +56,36 @@
 	$('#submit_note').click(function(){
 		var note = $('.panel').val();
 		if (note != "") {
-			$('.custom_opt').show();
-			$('#note_of_photo').text(note);
+			// exchange view
+			$('.photo_note').hide();
 			$('.option').show();
 			$('#create_photo').parent().hide();
-			$('.photo_note').hide();
+			// add note content
+			$('.custom_opt').show();
+			$('#note_of_photo').text(note);
+			$('#note').prop("checked", true);
+			$('.btn-disable').hide();
+	    $('.next').show();
+	    $('.cancel').show();
 		};
 	});
 
-
-	// var noteInfo = $('.panel').val();
-	// console.log(noteInfo);
-
-	// $('textarea.panel').keydown(function(){
-	// 	if ($('.panel').val() != noteInfo){
-	// 		$('.panel').val(" ");
-	// 	};
-		
-	// });
-	// $('.close').click(function(){
-    // $('.photo_note').hide();
-  // });
+	$('.cancel_note').click(function(){
+    $('.photo_note').hide();
+    $('.option').show();
+  });
 
 
 	$('.option input').change(function() {
   if ($('#opt1').is(':checked') || $('#opt2').is(':checked') || $('#opt3').is(':checked') || $('#note').is(':checked')) {
     console.log('Checked');
     $('.btn-disable').hide();
-    $('.btn-next').show();
+    $('.next').show();
     $('.cancel').show();
   } else if ($('#opt1').not(':checked') && $('#opt2').not(':checked') && $('#opt3').not(':checked')) {
     console.log('Unchecked');
     $('.btn-disable').show();
-    $('.btn-next').hide();
+    $('.next').hide();
     $('.cancel').hide();
   }
 });
