@@ -17,19 +17,14 @@ body {
 }
 
 .center {
-  /*width: auto;*/
   display: table;
   margin-left: auto;
   margin-right: auto;
-  /*vertical-align:middle;*/
-  /*table-layout: fixed;*/
 }
 
 .btn-next {
 	background-color: #ff5d5d;
 	color: white;
-	/*font-weight: bolder;*/
-
 }
 
 .btn-cancel { 
@@ -46,6 +41,7 @@ body {
 	opacity: 0.4;
   filter: alpha(opacity=40);
 }
+
 
 
 /* application */
@@ -116,20 +112,34 @@ nav a#logo:hover {
 
 /* welcome#index */
 
-#index-quote {
-	/*width: 888px;*/
+
+#index-quote h4 {
+	font-size: 60px;
 }
 
-#index-title {
-	font-family: 'Arial Black';
-	color: #ff5d5d;
-	font-weight: bolder;
-	text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5);
+#index-quote small{
+	font-size: 30px;
 }
 
 #welcome-message {
 	/*width: 500px;*/
 	color: white;
+}
+
+#index-title {
+	font-family: 'Arial Black';
+	font-size: 120px;
+	color: #ff5d5d;
+	font-weight: bolder;
+	text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+#welcome-message h2 {
+	font-size: 90px;
+}
+
+.action h5 {
+	font-size: 50px;
 }
 
 /*photos#new*/
