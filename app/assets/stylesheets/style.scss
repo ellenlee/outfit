@@ -166,6 +166,9 @@ nav #logo {
 /* photo #show */
 .option-area {
 	margin-top: 2em; margin-bottom: 2em;
+	display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .option-area .option {
@@ -173,5 +176,12 @@ nav #logo {
 
 }
 
+/* photo_asker #new */
+input#asker_email {
+	color: #eee;
+	background-color: rgba(0%,0%,0%, 0);
+	border: 0px;
+	border-bottom: 2px solid #ff5d5d;
+}
 
 

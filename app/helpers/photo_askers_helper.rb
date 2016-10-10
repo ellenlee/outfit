@@ -1,0 +1,2 @@
+module PhotoAskersHelper
+end

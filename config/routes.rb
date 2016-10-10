@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   root "welcome#index"
   get "/v1" => "welcome#v1"
 
-  resources :photos 
-  resources :requests
-	resources :askers
+  resources :photos do
+    resources :requests, controller: "photo_requests"
+  	resources :askers, controller: "photo_askers"
+  end 
   # get "welcome#v1"
 
   namespace :admin do

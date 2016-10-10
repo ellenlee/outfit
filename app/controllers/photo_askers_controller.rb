@@ -1,7 +1,13 @@
-class AskersController < ApplicationController
+class PhotoAskersController < ApplicationController
+	before_action :set_photo
+
+	def new
+		@asker = Asker.new
+		
+	end
 
 	def create
-		@photo = Photo.find(params[:photo])
+		
 		@asker = Asker.find_or_initialize_by(asker_params)
 
 		if @asker.save
@@ -14,6 +20,11 @@ class AskersController < ApplicationController
 	end
 
 	private
+
+	def set_photo
+		@photo = Photo.find(params[:photo_id])
+		
+	end
 
 	def asker_params
 		params.require(:asker).permit(:email, :name)

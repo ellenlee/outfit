@@ -1,0 +1,32 @@
+<%= render partial: 'photos/step' %>
+
+<header>
+	<h3>最後，專屬妳的十種穿搭建議要寄到…</h3>
+</header>
+
+<%= form_for [@photo, @asker] do |f| %>
+	<section class="option-area center">
+		<div class="photo pull-left">
+			<%= image_tag @photo.img.url(:medium) %>
+			<%= hidden_field_tag :photo, @photo.id %>
+		</div>
+		<div class="option pull-left">
+			<%= f.email_field :email, autofocus: true, placeholder: " E-mail", class: "form-control" %>
+		</div>
+	</section>
+	<div class="action">
+	  <div class="btn btn-disable">寄給我</div>
+	  <%= f.submit "寄給我", class: "btn btn-next"%>
+  	<p class="small" style="color: #ccc; margin-top: 10px">我們保證不會寄給你垃圾信</p>
+</div>
+<% end %>
+<script>
+	$('.step2').removeClass('step-off').addClass('step-on')
+	$('.step3').removeClass('step-off').addClass('step-on')
+
+	// $('.btn-disable').show();
+ //    $('.btn-next').hide();
+ //    $('.cancel').hide();
+
+
+</script>
