@@ -13,7 +13,9 @@ body {
 }
 
 .action .btn {
-	width: 150px;
+	width: 250px;
+	height: 60px;
+	font-size: 33px;
 }
 
 .center {
@@ -22,6 +24,13 @@ body {
   margin-right: auto;
 }
 
+input[type="checkbox"] {
+	border: solid 2px #ff5d5d;
+	background-color: yellow;
+}
+
+/* action */
+
 .btn-next {
 	background-color: #ff5d5d;
 	color: white;
@@ -29,7 +38,7 @@ body {
 
 .btn-cancel { 
 	color: #fff; 
-	font-size: 6px;
+	font-size: 18px;
 	margin-left: 15px;
 	display: none;
 }
@@ -41,7 +50,6 @@ body {
 	opacity: 0.4;
   filter: alpha(opacity=40);
 }
-
 
 
 /* application */
@@ -68,6 +76,7 @@ nav #logo {
 	font-family: 'Arial Black';
 	text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5);
 	font-weight: 900;
+	font-size: 25px;
 	color: #ff5d5d;
 }
 
@@ -75,10 +84,16 @@ nav a#logo:hover {
 	text-decoration: none;
 }
 
+nav .about {
+	font-size: 18px;
+}
+
 /* step-indicator*/
 
 .step-icons {
 	position: fixed;
+	top: auto;
+	bottom: auto;
 }
 
 .step-icons div {
@@ -100,6 +115,7 @@ nav a#logo:hover {
 }
 
 .step-icons p {
+	font-family: 'Arial';
 	font-weight: 900;
 	text-align: center;
 	margin: 0;
@@ -112,13 +128,15 @@ nav a#logo:hover {
 
 /* welcome#index */
 
-
 #index-quote h4 {
-	font-size: 60px;
+	font-size: 30px;
 }
 
 #index-quote small{
-	font-size: 30px;
+	font-weight: 200px;
+	font-size: 15px;
+	position: relative;
+	left: 170px;
 }
 
 #welcome-message {
@@ -128,25 +146,41 @@ nav a#logo:hover {
 
 #index-title {
 	font-family: 'Arial Black';
-	font-size: 120px;
+	font-size: 60px;
 	color: #ff5d5d;
 	font-weight: bolder;
 	text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5);
+	margin: 0.8em auto;
 }
 
 #welcome-message h2 {
-	font-size: 90px;
+	font-size: 45px;
+	text-shadow: 2px 3px 0 #000000;
+	font-weight: 500;
 }
 
 .action h5 {
-	font-size: 50px;
+	font-size: 25px;
+	margin-bottom: 25px;
 }
 
 /*photos#new*/
 
+header h3 {
+	font-size: 30px;
+	font-weight: 500;
+	/*letter-spacing: -1px;*/
+	text-shadow: 2px 3px 0 #000000;
+}
+
+header h4 {
+	font-size: 20px;
+	text-shadow: 2px 3px 0 #000000;
+}
+
 .upload-area {
 	margin-top: 2em; margin-bottom: 2em;
-	width: 180px; height: 180px;
+	width: 210px; height: 210px;
 	border-radius: 4px;
 	background-color: #d8d8d8;
 	border: solid 1px #979797;
@@ -162,7 +196,11 @@ nav a#logo:hover {
 .fileUpload {
   position: relative;
   overflow: hidden;
-  /*margin: 10px;*/
+  width: 118px;
+}
+
+.fileUpload span {
+	font-size: 12px;
 }
 
 .fileUpload input.upload {
@@ -194,6 +232,7 @@ nav a#logo:hover {
   position: inherit;
   top: 0;
   left: 0;
+  margin-left: 20px;
   /*padding-top: 30px;*/
   width: 280px;
   /*background-color: rgba(0,0,0,.3);*/

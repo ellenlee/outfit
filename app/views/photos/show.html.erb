@@ -1,9 +1,8 @@
-<%= render partial: 'step' %>
-
 <header>
 	<h3>可以搭什麼？</h3>
   <h4>請選擇妳對於這件衣服搭配上的問題，或告訴我們</h4>
 </header>
+<%= render partial: 'step' %>
 
 <%= form_for [@photo, @request] do |f| %>
 	<section class="option-area center">
@@ -14,7 +13,7 @@
 		<div class="option pull-left">
 			<% @options.each do |opt| %>
 				<div class="radio text-left">
-					<label style="margin-bottom: 5px">
+					<label for="opt"+opt.id.to_s style="margin-bottom: 5px">
 					  <%= check_box_tag "ids[]", opt.id, false, id: "opt"+opt.id.to_s %>
 					  <%= opt.description %>
 					</label>
