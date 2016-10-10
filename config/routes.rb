@@ -6,9 +6,10 @@ Rails.application.routes.draw do
 
   resources :photos do
     resources :requests, controller: "photo_requests"
-  	resources :askers, controller: "photo_askers"
+    resources :askers, controller: "photo_askers"
   end 
-  # get "welcome#v1"
+  get "thanks" => "welcome#thanks"
+  get "about" => "welcome#about"
 
   namespace :admin do
   	root "photos#index"
