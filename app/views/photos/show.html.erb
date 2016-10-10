@@ -13,24 +13,74 @@
 		</div>
 		<div class="option pull-left">
 			<% @options.each do |opt| %>
-				<div  class="radio text-left">
+				<div class="radio text-left">
 					<label style="margin-bottom: 5px">
 					  <%= check_box_tag "ids[]", opt.id, false, id: "opt"+opt.id.to_s %>
 					  <%= opt.description %>
 					</label>
 				</div>
 			<% end %>
+			<div class="text-center", style="margin-top: 15px">
+				<p class="btn btn-next btn-xs", id="create_photo">我想親自描述</p>
+			</div>
+			<div class="radio text-left custom_opt", style="display: none">
+				<label style="margin-top: 15px">
+					<%= check_box_tag "note", true, true %>
+					<span id="note_of_photo"></span>
+				</label>
+			</div>
+
+		</div>
+		<div class="photo_note">
+			<a class="cancel_note">×</a>
+			<br>
+			<%= text_area_tag :note, nil, autofocus: true, class: "panel", placeholder: "歡迎寫下任何這件衣服的穿搭問題。
+例如：還可以搭什麼、或是您將出席的場合、偏好的風格等。" %>
+			<p id="submit_note" class="btn btn-next pull-right" style="margin-right: 8px" >確定</p>
 		</div>
 	</section>
 	<%= render partial: 'action', locals: { f: f} %>
 <% end %>
 
 
+
+
 <script>
 	$('.step2').removeClass('step-off').addClass('step-on')
 
+	$('#create_photo').click(function(){
+		$('.option').hide();
+		$('.photo_note').show();
+	});
+
+	$('#submit_note').click(function(){
+		var note = $('.panel').val();
+		if (note != "") {
+			$('.custom_opt').show();
+			$('#note_of_photo').text(note);
+			$('.option').show();
+			$('#create_photo').parent().hide();
+			$('.photo_note').hide();
+		};
+	});
+
+
+	// var noteInfo = $('.panel').val();
+	// console.log(noteInfo);
+
+	// $('textarea.panel').keydown(function(){
+	// 	if ($('.panel').val() != noteInfo){
+	// 		$('.panel').val(" ");
+	// 	};
+		
+	// });
+	// $('.close').click(function(){
+    // $('.photo_note').hide();
+  // });
+
+
 	$('.option input').change(function() {
-  if ($('#opt1').is(':checked') || $('#opt2').is(':checked') || $('#opt3').is(':checked')) {
+  if ($('#opt1').is(':checked') || $('#opt2').is(':checked') || $('#opt3').is(':checked') || $('#note').is(':checked')) {
     console.log('Checked');
     $('.btn-disable').hide();
     $('.btn-next').show();
@@ -42,5 +92,11 @@
     $('.cancel').hide();
   }
 });
+
+	// $(document).ready(function(){
+	 
+	  
+	  
+	// });
 
 </script>

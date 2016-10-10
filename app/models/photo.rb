@@ -6,6 +6,7 @@ class Photo < ApplicationRecord
  
 	belongs_to :asker, optional: true
 
+	has_one  :note
 	has_many :requests, dependent: :destroy
 	has_many :options, through: :requests, dependent: :destroy
 

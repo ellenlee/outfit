@@ -4,6 +4,9 @@ class PhotoRequestsController < ApplicationController
 		options = ids.map{ |i| Option.find_by_id(i) }.compact
 
 		@photo = Photo.find(params[:photo])
+		@note = @photo.build_note( content: params[:note])
+		@note.save
+
 		if @photo.options << options
 			redirect_to new_photo_asker_path(@photo)
 		else

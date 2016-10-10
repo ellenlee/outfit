@@ -177,8 +177,41 @@ nav a#logo:hover {
 
 .option-area .option {
 	margin-left: 20px;
-
 }
+
+.photo_note {
+	display: none;
+  position: inherit;
+  top: 0;
+  left: 0;
+  /*padding-top: 30px;*/
+  width: 280px;
+  /*background-color: rgba(0,0,0,.3);*/
+}
+
+.photo_note.open {
+  display: block;
+}
+
+.photo_note .panel {
+  margin: 0 auto;
+  color: #9b9b9b;
+  width: 95%;
+  height: 180px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.photo_note .cancel_note {
+	color: white;
+  float: right;
+	/*width: 20.2px;*/
+	/*height: 5.6px;*/
+	/*-webkit-transform: rotate(-90deg);*/
+	/*transform: rotate(-90deg);*/
+	/*background-color: #d9d3db;*/
+}
+
 
 /* photo_asker #new */
 input#asker_email {

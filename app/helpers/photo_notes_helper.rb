@@ -1,0 +1,2 @@
+module PhotoNotesHelper
+end

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :photos do
     resources :requests, controller: "photo_requests"
+    resources :notes, controller: "photo_notes"
     resources :askers, controller: "photo_askers"
   end 
   get "thanks" => "welcome#thanks"

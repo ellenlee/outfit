@@ -1,0 +1,2 @@
+class PhotoNotesController < ApplicationController
+end
