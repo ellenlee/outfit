@@ -1,20 +1,29 @@
-<h2>1. 上傳衣服照片</h2>
+<header>
+  <h3>這件衣服是⋯⋯</h3>
+  <h4>為了提供妳合適的搭法，請讓我們知道這件衣服樣子</h4>
+</header>
+
+<%= render partial: 'step' %>
+
 <%= form_for @photo do |f| %>
 	<div class="center">
 		<div class="img-show" style="display: none">
 			<img id="thumbnil" src="" alt="image"/>
 		</div>
 
-		<div class="img-upload">
+		<div class="upload-area">
 			<%= render partial: 'form_errors', locals: { :f => f } %>
-		  <%= f.file_field :img, accept: "image/*",  onchange: "showMyImage(this)" %>
+      <div class="fileUpload btn btn-next">
+        <span>上傳照片</span>
+        <%= f.file_field :img, accept: "image/*",  onchange: "showMyImage(this)", class: "upload" %>
+      </div>
 		</div>
 		
 	</div>
   <div class="action">
-    <div class="btn btn-disable">NEXT</div>
-    <%= f.submit "NEXT", class: "btn btn-next", style: "display: none" %>
-    <%= link_to "Cancel", {}, class: "cancel btn btn-default", style: "display: none" %>
+    <div class="btn btn-disable">下一步</div>
+    <%= f.submit "下一步", class: "btn btn-next", style: "display: none" %>
+    <%= link_to "取消", {}, class: "cancel btn-cancel" %>
     
   </div>
 
@@ -42,7 +51,7 @@
 
     console.log("ddd");
     $('.img-show').toggle('show');
-    $('.img-upload').toggle('hidden');
+    $('.upload-area').toggle('hidden');
     $('.btn-next').toggle('show');
     $('.cancel').toggle('show');
     $('.btn-disable').toggle('hidden');

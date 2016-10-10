@@ -1,12 +1,18 @@
+<script type="text/javascript">
+	$('#logo').hide();
+</script>
 
-<h1 id="index-title">OUTFIT HUNT</h1>
-
+<div id="index-quote">
+	<h4>“閒置衣服是女人衣櫥最大的敵人”</h4>
+	<small>by R. LaBerrari</small>
+</div>
 
 <div id="welcome-message">
-	<h3 style="margin-bottom: 0px">你的衣櫃裡是不是也有一件</h3>
-	<h2 style="margin-top: 0px">不知該怎麼搭配的衣服？</h2>
-	<h4 style="margin-top: 1em; margin-bottom: 1em">Outfit Hunt 幫你找！</h4>
-	<%= link_to "START", new_photo_path, class: "btn btn-next" %>	
+	<h1 id="index-title" style="margin-bottom: 0px; ">OUTFIT HUNT</h1>
+	<h2 style="margin-top: 0px">發現衣服更多實用穿法</h2>
 </div>
+
+
+<%= link_to "上傳衣服", new_photo_path, class: "btn btn-next", style: "margin-top: 2em; " %>	
 
 

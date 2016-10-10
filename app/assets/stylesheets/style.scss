@@ -9,6 +9,11 @@ body {
 	background-attachment: fixed;
 	background-size: cover;
 	color: #eee;
+	font-family: 'Arial';
+}
+
+.action .btn {
+	width: 150px;
 }
 
 .center {
@@ -21,17 +26,25 @@ body {
 }
 
 .btn-next {
-	background-color: #FC5E61;
+	background-color: #ff5d5d;
 	color: white;
 	/*font-weight: bolder;*/
+
 }
 
-.btn-cancel {}
+.btn-cancel { 
+	color: #fff; 
+	font-size: 6px;
+	margin-left: 15px;
+	display: none;
+}
 
 .btn-disable {
-	background-color: #eee;
+	background-color: #ff5d5d;
 	color: white;
-
+	pointer-events: none;
+	opacity: 0.4;
+  filter: alpha(opacity=40);
 }
 
 
@@ -46,33 +59,120 @@ body {
 	display:table-cell;
   vertical-align:middle;
   text-align:center;
-  /*background-color: #eee;*/
-	/*border: 1px solid #999;*/
-	/*width: 320px;*/
-	/*display: block;	  */
-	/*margin: auto auto; */
-	/*text-align: center;*/
 }
 
-nav ul {
+nav #about {
 	position: absolute; 
 	top:20px; right: 20px;
 }
 
+nav #logo {
+	position: absolute; 
+	top:20px; left: 20px;
+	font-family: 'Arial Black';
+	text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5);
+	font-weight: 900;
+	color: #ff5d5d;
+}
+
+/* step-indicator*/
+
+.step-icons {
+	position: fixed;
+}
+
+.step-icons div {
+	width: 60px;
+	height: 60px;
+  margin: 15px;
+	border-radius:99em;
+	display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.step-on {
+	background-color: #ffffff;
+}
+
+.step-off {
+	border: solid 2px #ffffff;
+}
+
+.step-icons p {
+	font-weight: 900;
+	text-align: center;
+	margin: 0;
+}
+
+
+.step-on p {
+	color: #ff5d5d;
+}
+
 /* welcome#index */
 
+#index-quote {
+	/*width: 888px;*/
+}
+
 #index-title {
-	color: #FC5E61;
+	font-family: 'Arial Black';
+	color: #ff5d5d;
 	font-weight: bolder;
+	text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5);
 }
 
 #welcome-message {
+	/*width: 500px;*/
 	color: white;
 }
 
-.img-upload {
-	width: 300px; height: 300px;
-	border: 1px solid #999;
+/*photos#new*/
+
+.upload-area {
+	margin-top: 2em; margin-bottom: 2em;
+	width: 180px; height: 180px;
+	border-radius: 4px;
+	background-color: #d8d8d8;
+	border: solid 1px #979797;
+	display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.img-show {
+	margin-bottom: 2em;
+}
+
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+  /*margin: 10px;*/
+}
+
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+
+
+
+#photo_img {
+	width: 237px;
+	height: 71px;
+	border-radius: 8px;
+	background-color: #ff5d5d;
+
+
 }
 
 #message p {

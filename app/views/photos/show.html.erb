@@ -1,4 +1,8 @@
-<%= form_for @%>
+<%= render partial: 'step' %>
+
+
+
+
 	<div class="photo-show col-xs-12 col-sm-7">
 		<%= image_tag @photo.img.url(:medium) %>
 	</div>
@@ -15,3 +19,6 @@
 		<div class="btn btn-disable">NEXT</div>
 	</div>
 
+<script>
+	$('.step2').removeClass('step-off').addClass('step-on')
+</script>
