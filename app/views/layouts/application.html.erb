@@ -11,7 +11,7 @@
   <body id="<%= controller.controller_name %>-<%= controller.action_name %>">
 		<!-- nav -->
 		<nav>
-			<p id="logo">OUTFIT HUNT</p>
+			<%= link_to "OUTFIT HUNT", :root, id: "logo" %>
 			<%= link_to "關於我們", about_path, id:"about", class: "btn btn-warning btn-xs pull-right" %>
 		</nav>
 
