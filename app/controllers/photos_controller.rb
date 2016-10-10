@@ -13,8 +13,10 @@ class PhotosController < ApplicationController
 
 	def show
 		@photo = Photo.find(params[:id])
+		@request = @photo.requests.build
 		@options = Option.all
 		@asker = Asker.new
+
 	end
 
 	private

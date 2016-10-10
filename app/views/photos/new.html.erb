@@ -20,13 +20,8 @@
 		</div>
 		
 	</div>
-  <div class="action">
-    <div class="btn btn-disable">下一步</div>
-    <%= f.submit "下一步", class: "btn btn-next", style: "display: none" %>
-    <%= link_to "取消", {}, class: "cancel btn-cancel" %>
-    
-  </div>
 
+  <%= render partial: 'action', locals: { f: f} %>
 <% end %>
 
 <script>
@@ -52,8 +47,8 @@
     console.log("ddd");
     $('.img-show').toggle('show');
     $('.upload-area').toggle('hidden');
+    $('.btn-disable').toggle('hidden');
     $('.btn-next').toggle('show');
     $('.cancel').toggle('show');
-    $('.btn-disable').toggle('hidden');
   }
 </script>
