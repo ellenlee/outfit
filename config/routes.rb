@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   end 
   get "thanks" => "welcome#thanks"
   get "about" => "welcome#about"
+  get "policy" => "welcome#policy"
 
   namespace :admin do
   	root "photos#index"

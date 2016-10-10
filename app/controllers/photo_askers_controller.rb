@@ -13,7 +13,7 @@ class PhotoAskersController < ApplicationController
 			@asker.ask_count += 1
 			redirect_to thanks_path
 		else
-			redirect_to photo_path(@photo), alert: "#{@asker.errors.full_messages.to_sentence}, #{@photo.errors.full_messages.to_sentence}"
+			redirect_to new_photo_asker_path(@photo), alert: "#{@asker.errors.full_messages.to_sentence}, #{@photo.errors.full_messages.to_sentence}"
 		end
 	end
 

@@ -16,17 +16,29 @@
 	</section>
 	<div class="action">
 	  <div class="btn btn-disable">寄給我</div>
-	  <%= f.submit "寄給我", class: "btn btn-next"%>
-  	<p class="small" style="color: #ccc; margin-top: 10px">我們保證不會寄給你垃圾信</p>
+	  <%= f.submit "寄給我", class: "btn btn-next", style: "display: none"%>
+	  <br>
+	  <p style="margin-top: 10px">
+		  <%= link_to "我們保證不會寄給你垃圾信", policy_path, target: "_blank", class: "small", style:"color: #ccc;" %>
+	  	
+	  </p>
 </div>
 <% end %>
 <script>
 	$('.step2').removeClass('step-off').addClass('step-on')
 	$('.step3').removeClass('step-off').addClass('step-on')
 
-	// $('.btn-disable').show();
- //    $('.btn-next').hide();
- //    $('.cancel').hide();
+	$('.option input').keydown(function() {
+		if ($('#asker_email').val().indexOf("@") != -1 ){
+			$('.btn-disable').hide();
+	    $('.btn-next').show();
+			console.log("get email");
+		} else if ($('#asker_email').val().indexOf("@") == -1){
+			$('.btn-disable').show();
+	    $('.btn-next').hide();
+			console.log("not finish input");
+		};
+	}); 
 
 
 </script>
