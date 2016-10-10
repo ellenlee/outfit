@@ -1,23 +1,25 @@
 <%= render partial: 'step' %>
 
+<header>
+	<h3>可以搭什麼？</h3>
+  <h4>請選擇妳對於這件衣服搭配上的問題，或告訴我們</h4>
+</header>
+
+<div class="photo-show col-xs-12 col-sm-7">
+	<%= image_tag @photo.img.url(:medium) %>
+</div>
+<div class="info col-xs-12 col-sm-3">
+	<h4>你要找什麼？</h4>
+		<% @items.each do  |item| %>
+		  <%= check_box_tag "photo[items_ids][]", item.id, @photo.items.map(&:id).include?(item.id) %> <%= item.name %>
+		<% end %>
+	
+</div>
 
 
-
-	<div class="photo-show col-xs-12 col-sm-7">
-		<%= image_tag @photo.img.url(:medium) %>
-	</div>
-	<div class="info col-xs-12 col-sm-3">
-		<h4>你要找什麼？</h4>
-			<% @items.each do  |item| %>
-			  <%= check_box_tag "photo[items_ids][]", item.id, @photo.items.map(&:id).include?(item.id) %> <%= item.name %>
-			<% end %>
-		
-	</div>
-
-
-	<div class="action col-xs-12" style="padding-top: 25px">
-		<div class="btn btn-disable">NEXT</div>
-	</div>
+<div class="action col-xs-12" style="padding-top: 25px">
+	<div class="btn btn-disable">NEXT</div>
+</div>
 
 <script>
 	$('.step2').removeClass('step-off').addClass('step-on')

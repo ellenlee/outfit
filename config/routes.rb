@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   root "welcome#index"
   get "/v1" => "welcome#v1"
 
-  resources :photos
+  resources :photos 
+  resources :requests
 	resources :askers
   # get "welcome#v1"
 

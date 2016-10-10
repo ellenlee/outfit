@@ -13,7 +13,7 @@ class PhotosController < ApplicationController
 
 	def show
 		@photo = Photo.find(params[:id])
-		@items = Item.all
+		@options = Option.all
 		@asker = Asker.new
 	end
 

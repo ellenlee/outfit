@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161008164733) do
+ActiveRecord::Schema.define(version: 20161010043908) do
 
   create_table "askers", force: :cascade do |t|
     t.string   "name"
@@ -21,10 +21,18 @@ ActiveRecord::Schema.define(version: 20161008164733) do
     t.index ["email"], name: "index_askers_on_email", unique: true
   end
 
-  create_table "items", force: :cascade do |t|
+  create_table "option", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "options", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "photo_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "photos", force: :cascade do |t|
@@ -37,24 +45,15 @@ ActiveRecord::Schema.define(version: 20161008164733) do
     t.integer  "asker_id"
   end
 
-  create_table "request_items", force: :cascade do |t|
-    t.integer  "item_id"
-    t.integer  "photo_id"
-    t.integer  "asker_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["asker_id"], name: "index_request_items_on_asker_id"
-    t.index ["item_id"], name: "index_request_items_on_item_id"
-    t.index ["photo_id"], name: "index_request_items_on_photo_id"
-  end
-
   create_table "requests", force: :cascade do |t|
-    t.integer  "user_id"
+    t.integer  "asker_id"
     t.integer  "photo_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "option_id"
+    t.index ["asker_id"], name: "index_requests_on_asker_id"
+    t.index ["option_id"], name: "index_requests_on_option_id"
     t.index ["photo_id"], name: "index_requests_on_photo_id"
-    t.index ["user_id"], name: "index_requests_on_user_id"
   end
 
 end
