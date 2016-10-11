@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   root "welcome#index"
   get "/v1" => "welcome#v1"
 
-  resources :photos do
-    resources :requests, controller: "photo_requests"
-    resources :notes, controller: "photo_notes"
-    resources :askers, controller: "photo_askers"
+  resources :photos, except: :destroy do
+    resources :requests, controller: "photo_requests", except: :destroy
+    resources :notes, controller: "photo_notes", except: :destroy
+    resources :askers, controller: "photo_askers", except: :destroy
   end 
   get "thanks" => "welcome#thanks"
   get "about" => "welcome#about"
@@ -15,7 +15,12 @@ Rails.application.routes.draw do
 
   namespace :admin do
   	root "photos#index"
-  	resources :photos
+    resources :askers
+    resources :photos do
+      collection do
+        post :bulk_update
+      end
+    end
   end
 
 

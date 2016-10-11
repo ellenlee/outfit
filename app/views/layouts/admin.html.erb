@@ -8,13 +8,21 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <style>
     	body {
-				background: image-url("") repeat-y;
+				background: none;
+        padding: 15px;
 			}
     </style>
   </head>
 
   <body id="<%= controller.controller_name %>-<%= controller.action_name %>">
-  admin
+    <nav>
+      <ul class="list-inline">
+        <li><%= link_to "上傳照片一覽", admin_photos_path %></li>
+        <li><%= link_to "上傳者一覽", admin_askers_path %></li>
+      </ul>
+      <hr>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
