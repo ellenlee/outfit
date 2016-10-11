@@ -164,7 +164,7 @@ nav .about {
 	margin-bottom: 25px;
 }
 
-/*photos#new*/
+/* photos#new */
 
 header h3 {
 	font-size: 30px;
@@ -205,6 +205,8 @@ header h4 {
 
 .fileUpload input.upload {
     position: absolute;
+    width: 100%;
+    height: 100%;
     top: 0;
     right: 0;
     margin: 0;
