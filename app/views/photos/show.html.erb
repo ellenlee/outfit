@@ -1,6 +1,6 @@
 <header>
 	<h3>可以搭什麼？</h3>
-  <h4>請選擇妳對於這件衣服搭配上的問題，或告訴我們</h4>
+  <h4>請選擇妳對這件衣服的搭配問題，<br>或告訴我們</h4>
 </header>
 <%= render partial: 'step' %>
 
@@ -20,7 +20,7 @@
 				</div>
 			<% end %>
 			<div class="text-center", style="margin-top: 15px">
-				<p class="btn btn-next btn-xs", id="create_photo">我想親自描述</p>
+				<p class="btn btn-next btn-xs", id="create_note">我想自己描述</p>
 			</div>
 			<div class="radio text-left custom_opt", style="display: none">
 				<label style="margin-top: 15px">
@@ -47,9 +47,10 @@
 <script>
 	$('.step2').removeClass('step-off').addClass('step-on')
 
-	$('#create_photo').click(function(){
+	$('#create_note').click(function(){
 		$('.option').hide();
 		$('.photo_note').show();
+		$('.photo img').hide();
 	});
 
 	$('#submit_note').click(function(){
@@ -58,7 +59,8 @@
 			// exchange view
 			$('.photo_note').hide();
 			$('.option').show();
-			$('#create_photo').parent().hide();
+			$('#create_note').parent().hide();
+			$('.photo img').show();
 			// add note content
 			$('.custom_opt').show();
 			$('#note_of_photo').text(note);

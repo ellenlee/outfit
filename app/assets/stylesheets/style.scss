@@ -4,7 +4,7 @@
 
 
 body {
-	background-image: image-url('welcome-bg01-1920X1280.png');
+	background-image: image-url('bg_1920X1280_174K.jpg');
 	background-position: center top;
 	background-attachment: fixed;
 	background-size: cover;
@@ -49,11 +49,11 @@ input[type="checkbox"] {
 }
 
 .btn-disable {
-	background-color: #ff5d5d;
+	background-color: #d8d8d8;
 	color: white;
 	pointer-events: none;
-	opacity: 0.4;
-  filter: alpha(opacity=40);
+	/*opacity: 0.4;*/
+  /*filter: alpha(opacity=40);*/
 }
 
 
@@ -73,6 +73,7 @@ input[type="checkbox"] {
 nav #about {
 	position: absolute; 
 	top:20px; right: 20px;
+	background-color: #f5a623;
 }
 
 nav #logo {
@@ -91,44 +92,6 @@ nav a#logo:hover {
 
 nav .about {
 	font-size: 18px;
-}
-
-/* step-indicator*/
-
-.step-icons {
-	position: fixed;
-	top: auto;
-	bottom: auto;
-}
-
-.step-icons div {
-	width: 60px;
-	height: 60px;
-  margin: 15px;
-	border-radius:99em;
-	display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.step-on {
-	background-color: #ffffff;
-}
-
-.step-off {
-	border: solid 2px #ffffff;
-}
-
-.step-icons p {
-	font-family: 'Arial';
-	font-weight: 900;
-	text-align: center;
-	margin: 0;
-}
-
-
-.step-on p {
-	color: #ff5d5d;
 }
 
 /* welcome#index */
@@ -169,7 +132,52 @@ nav .about {
 	margin-bottom: 25px;
 }
 
-/* photos#new */
+.cite_note {
+	display: block;
+	position: absolute;
+	bottom: 15px;
+	width: 100vw;
+	left: 0; 
+}
+
+/* step-indicator*/
+
+.step-icons {
+	position: fixed;
+	top: auto;
+	bottom: auto;
+}
+
+.step-icons div {
+	width: 60px;
+	height: 60px;
+  margin: 15px;
+	border-radius:99em;
+	display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.step-on {
+	background-color: #ffffff;
+}
+
+.step-off {
+	border: solid 2px #ffffff;
+}
+
+.step-icons p {
+	font-family: 'Arial';
+	font-weight: 900;
+	text-align: center;
+	margin: 0;
+}
+
+.step-on p {
+	color: #ff5d5d;
+}
+
+/* photos #new */
 
 header h3 {
 	font-size: 30px;
@@ -185,7 +193,7 @@ header h4 {
 
 .upload-area {
 	margin-top: 2em; margin-bottom: 2em;
-	width: 210px; height: 210px;
+	width: 230px; height: 230px;
 	border-radius: 4px;
 	background-color: #d8d8d8;
 	border: solid 1px #979797;
@@ -196,6 +204,10 @@ header h4 {
 
 .img-show {
 	margin-bottom: 2em;
+}
+
+.img-show img {
+	border-radius: 4px;
 }
 
 .fileUpload {
@@ -281,4 +293,10 @@ input#asker_email:-webkit-autofill {
 	background-color: rgba(0%,0%,0%, 0) !important; 
 }
 
+/* --- fluid ---*/
 
+@media (max-width: 420px) {
+	#portfolio .container {
+		width: auto;
+	}
+}
