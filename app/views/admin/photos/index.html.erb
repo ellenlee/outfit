@@ -1,10 +1,28 @@
 <h1>穿搭服務請求</h1>
-
-<% @photos.each do |photo| %>
-	<div class="outfit-request pull-left">
-		<p><%= image_tag photo.img.url(:medium) %></p>
-		<p>
-			#<%= photo.asker.id %> , 
-			<%= link_to photo.asker.email %></p>
-	</div>
-<% end %>
+<div class="table-responsive" style="overflow-x: visible;">
+	<table class="table table-condensed table-bordered">
+		<tr>
+			<td>#</td>
+			<td>照片</td>
+			<td>上傳者</td>
+			<td>時間</td>
+			<td>option</td>
+			<td>note</td>	
+		</tr>
+		<% @photos.each do |photo| %>
+		<tr>
+			<td><%= photo.id %></td>
+			<td><%= image_tag photo.img.url(:thumb) %></td>
+			<td><%= photo.asker_email.split("@").first %></td>
+			<td><%= photo.created_at.strftime('%Y-%m-%d %H:%M') %></td>
+			<td>
+				<ul>
+					<% photo.options.each do |opt| %>
+						<li><%= opt.description %></li>
+					<% end %>
+				</ul>
+			<td><%= photo.note_content %></td>
+		</tr>
+		<% end %>
+	</table>
+</div>

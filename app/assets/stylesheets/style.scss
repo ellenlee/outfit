@@ -12,6 +12,11 @@ body {
 	font-family: 'Arial';
 }
 
+body#photos-index {
+	background-image: none;
+	color: black;
+}
+
 .action .btn {
 	width: 250px;
 	height: 60px;

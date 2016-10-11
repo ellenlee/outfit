@@ -10,4 +10,20 @@ class Photo < ApplicationRecord
 	has_many :requests, dependent: :destroy
 	has_many :options, through: :requests, dependent: :destroy
 
+	def asker_email
+		if self.asker.present?
+			self.asker.email
+		else
+			"-"
+		end
+	end
+
+	def note_content
+		if self.note.present?
+			self.note.content
+		else
+			"-"
+		end
+	end
+
 end
