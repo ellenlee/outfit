@@ -1,5 +1,5 @@
-class Admin::PhotosController < ApplicationController
-	layout "admin"
+class Admin::PhotosController < Admin::AdminController
+	
 
 	def index
 		@photos = Photo.all
