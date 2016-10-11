@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  devise_for :users
+  devise_for :admins, :skip => [:registrations], controllers: { sessions: 'admins/sessions' }
+
+  resources :admins,
+    only: [:edit, :update, :destroy],
+    controller: 'admins/registrations',
+    as: :user_registration do
+      get 'cancel'
+    end
+
+  # as :admin do
+  #   get 'admins/edit' => 'devise/registrations#edit', :as => 'edit_admin_registration'
+  #   put 'admins' => 'devise/registrations#update', :as => 'admin_registration'
+  # end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root "welcome#index"

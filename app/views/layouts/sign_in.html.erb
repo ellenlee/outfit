@@ -11,22 +11,15 @@
 				background: none;
         padding: 15px;
         color: #333;
-      }
+			}
 
-      h2 {
-        margin-bottom: 15px;
+      #sign_in_area {
+        width: 50vw;
       }
     </style>
   </head>
 
   <body id="<%= controller.controller_name %>-<%= controller.action_name %>">
-    <nav>
-      <ul class="list-inline">
-        <li><%= link_to "上傳照片一覽", admin_photos_path %></li>
-        <li><%= link_to "上傳者一覽", admin_askers_path %></li>
-      </ul>
-      <hr>
-    </nav>
 
     <!-- 警告訊息 -->
     <% if flash[:notice].present? %>
@@ -38,7 +31,9 @@
         <%= flash[:alert]%>
       </div>
     <% end %>
-
-    <%= yield %>
+    
+    <div id="sign_in_area">
+      <%= yield %>
+    </div>
   </body>
 </html>
