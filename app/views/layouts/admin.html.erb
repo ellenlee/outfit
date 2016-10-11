@@ -10,22 +10,23 @@
   </head>
 
   <body id="<%= controller.controller_name %>-<%= controller.action_name %>">
-    <nav>
-      <ul class="list-inline">
+    <div class="pull-right">
+      <% if current_admin %>
+        <%= current_admin.name %>｜
+        <%= link_to("登出", destroy_admin_session_path, :method => :delete) %>｜
+        <%= link_to('修改密碼', edit_admin_registration_path(current_admin)) %>
+      <% end %>  
+    </div>
+    <nav class="clearfix">
+      <ul class="list-inline pull-left">
         <li><%= link_to "上傳照片一覽", admin_photos_path %></li>
         <li><%= link_to "上傳者一覽", admin_askers_path %></li>
         <li><%= link_to "Admins", admin_admins_path %></li>
       </ul>
-      <hr>
     </nav>
-    <div>
-      <% if current_admin %>
-      <%= current_admin.name %>｜
-        <%= link_to("登出", destroy_admin_session_path, :method => :delete) %>｜
-        <%= link_to('修改密碼', edit_admin_registration_path(current_admin)) %>
-      <% end %>  
-    </div>    
-        <!-- 全站資訊 -->
+    <hr>
+    
+    <!-- 全站資訊 -->
     <div class="site_info">
       <ul class="site_info_list list-unstyled">
         <li>總照片：<%= Photo.all.count %></li>
