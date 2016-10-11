@@ -6,11 +6,11 @@ class PhotoAskersController < ApplicationController
 	end
 
 	def create
-		
 		@asker = Asker.find_or_initialize_by(asker_params)
+		@asker.photos << @photo
+		@asker.ask_count += 1
+		
 		if @asker.save
-			@asker.photos << @photo
-			@asker.ask_count += 1
 			redirect_to thanks_path
 		else
 			redirect_to new_photo_asker_path(@photo), alert: "#{@asker.errors.full_messages.to_sentence}, #{@photo.errors.full_messages.to_sentence}"

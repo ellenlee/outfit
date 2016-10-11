@@ -1,0 +1,21 @@
+body {
+	background: none;
+  padding: 15px;
+  color: #333;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+.site_info {
+	position: absolute;
+	top: 20px; right: 20px;
+	background-color: #ccc;
+	border: 1px #ccc solid;
+	padding: 10px;
+}
+
+.site_info_list {
+	margin: 0;
+}

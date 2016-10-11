@@ -1,1 +1,27 @@
 <h2>上傳者一覽</h2>
+
+	<div class="table-responsive" style="overflow-x: visible;">
+		<table class="table table-condensed table-bordered">
+			<tr>
+				<td>#</td>
+				<td>名稱</td>
+				<td>上傳數</td>
+				<td>照片</td>
+				<td>備註</td>	
+			</tr>
+			<% @askers.each do |asker| %>
+				<tr>
+					<td><%= asker.id %></td>	
+					<td><%= asker.email.split("@").first %></td>
+					<td class="text-center"><%= asker.ask_count %></td>
+					<td>
+						<% asker.photos.each do |photo| %>
+							<%= image_tag photo.img(:thumb) %>
+						<% end %>
+					</td>
+					<td></td>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+<br><br><br><br>

@@ -13,7 +13,7 @@ class Admin::PhotosController < Admin::AdminController
 			photos.each { |photo| photo.destroy }
 		end
 
-		redirect_to admin_photos_path
+		redirect_to admin_photos_path, alert: "照片已刪除"
 	end
 
 

@@ -5,18 +5,8 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <style>
-    	body {
-				background: none;
-        padding: 15px;
-        color: #333;
-      }
-
-      h2 {
-        margin-bottom: 15px;
-      }
-    </style>
   </head>
 
   <body id="<%= controller.controller_name %>-<%= controller.action_name %>">
@@ -28,6 +18,14 @@
       <hr>
     </nav>
 
+    <!-- 全站資訊 -->
+    <div class="site_info">
+      <ul class="site_info_list list-unstyled">
+        <li>總照片：<%= Photo.all.count %></li>
+        <li>總人數：<%= Asker.all.count %></li>
+      </ul>
+    </div>
+
     <!-- 警告訊息 -->
     <% if flash[:notice].present? %>
       <div class="alert alert-success" role="alert">
@@ -38,6 +36,8 @@
         <%= flash[:alert]%>
       </div>
     <% end %>
+
+
 
     <%= yield %>
   </body>
