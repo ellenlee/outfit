@@ -1,0 +1,22 @@
+<h2>管理員清單</h2>
+
+<table class="table">
+	<tr>
+		<td>名稱</td>
+		<td>email</td>
+		<td></td>
+	</tr>
+	<% @admins.each do |admin| %>
+		<tr>
+			<td><%= admin.name %></td>
+			<td><%= admin.email %></td>
+			<td><%= button_to "delete", admin_admin_path(admin), method: :delete, data: {confirm: "Are you sure? "} %></td>
+		</tr>
+	<% end %>
+</table>
+<hr>
+<h4>add new admin</h4>
+<%= simple_form_for [:admin, @admin] do |f| %>
+	<%= f.input :email, placeholder: "Enter email", hint: "預設密碼等同於信箱", label: false %>
+	<%= f.button :submit, class: "btn-primary" %>
+<% end %>

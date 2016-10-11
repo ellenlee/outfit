@@ -29,6 +29,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
   	root "photos#index"
+    resources :admins
     resources :askers
     resources :photos do
       collection do
