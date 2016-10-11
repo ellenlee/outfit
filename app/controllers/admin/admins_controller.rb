@@ -17,6 +17,12 @@ class Admin::AdminsController < Admin::AdminController
 		end
 	end
 
+	def destroy
+		@admin = Admin.find(params[:id])
+		@admin.destroy
+		redirect_to admin_admins_path, alert: "刪除成功"
+	end
+
 	private
 	def admin_params
 		params.require(:admin).permit(:email)

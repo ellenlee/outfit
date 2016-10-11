@@ -2,12 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   devise_for :admins, :skip => [:registrations], controllers: { sessions: 'admins/sessions' }
 
-  resources :admins,
-    only: [:edit, :update, :destroy],
-    controller: 'admins/registrations',
-    as: :user_registration do
-      get 'cancel'
-    end
+ as :admin do
+  get 'admins/edit' => 'admins/registrations#edit', :as => 'edit_admin_registration'
+  put 'admins' => 'admins/registrations#update', :as => 'admin_registration'
+end
 
   # as :admin do
   #   get 'admins/edit' => 'devise/registrations#edit', :as => 'edit_admin_registration'
@@ -29,7 +27,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
   	root "photos#index"
-    resources :admins
+    resources :admins, only: [:index, :create, :destroy]
     resources :askers
     resources :photos do
       collection do
