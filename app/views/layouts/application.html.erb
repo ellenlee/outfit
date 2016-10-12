@@ -45,8 +45,6 @@
 		/></noscript>
 		<!-- DO NOT MODIFY -->
 		<!-- End Facebook Pixel Code -->
-
-
   </head>
 
   <body id="<%= controller.controller_name %>-<%= controller.action_name %>">
@@ -59,7 +57,7 @@
 		<!-- nav -->
 		<nav>
 			<%= link_to "OUTFIT HUNT", :root, id: "logo" %>
-			<%= link_to "關於我們", about_path, id:"about", class: "about btn btn-warning pull-right" %>
+			<%= link_to "關於我們", about_path, id:"about", class: "about btn btn-warning pull-right", target: "_blank" %>
 		</nav>
 
 	  <!-- 警告訊息 -->
@@ -73,7 +71,7 @@
 	    </div>
 	  <% end %>
 		
-		<div class="container center">
+		<div class="container">
 			<div id="main">
 		    <%= yield %>
   		</div>

@@ -2,91 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@media (min-width: 420px) {
 
 body {
 	background-image: image-url('bg_1920X1280_174K.jpg');
-	background-position: center top;
-	background-attachment: fixed;
-	background-size: cover;
-	color: #eee;
-	font-family: 'Arial';
+	
 }
 
-.action .btn {
-	width: 250px;
-	height: 60px;
-	font-size: 33px;
-}
 
-.center {
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
+
+
 
 input[type="checkbox"] {
 	border: solid 2px #ff5d5d;
 	background-color: yellow;
 }
 
-/* action */
 
-.btn-next {
-	background-color: #ff5d5d;
-	color: white;
-}
-
-.btn-cancel { 
-	color: #fff; 
-	font-size: 18px;
-	margin-left: 15px;
-	display: none;
-}
-
-.btn-disable {
-	background-color: #d8d8d8;
-	color: white;
-	pointer-events: none;
-	/*opacity: 0.4;*/
-  /*filter: alpha(opacity=40);*/
-}
 
 
 /* application */
 
-.container {
-	height: 100vh;
-	width: 100vw;
-}
-
-#main {
-	display:table-cell;
-  vertical-align:middle;
-  text-align:center;
-}
-
-nav #about {
-	position: absolute; 
-	top:20px; right: 20px;
-	background-color: #f5a623;
-}
-
 nav #logo {
-	position: absolute; 
-	top:20px; left: 20px;
-	font-family: 'Arial Black';
-	text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5);
-	font-weight: 900;
 	font-size: 25px;
-	color: #ff5d5d;
-}
-
-nav a#logo:hover {
-	text-decoration: none;
-}
-
-nav .about {
-	font-size: 18px;
 }
 
 /* welcome#index */
@@ -96,9 +34,9 @@ nav .about {
 }
 
 #index-quote small{
-	font-weight: 200px;
+	
 	font-size: 15px;
-	position: relative;
+
 	left: 170px;
 }
 
@@ -108,18 +46,11 @@ nav .about {
 }
 
 #index-title {
-	font-family: 'Arial Black';
 	font-size: 60px;
-	color: #ff5d5d;
-	font-weight: bolder;
-	text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5);
-	margin: 0.8em auto;
 }
 
 #welcome-message h2 {
 	font-size: 45px;
-	text-shadow: 2px 3px 0 #000000;
-	font-weight: 500;
 }
 
 .action h5 {
@@ -127,83 +58,22 @@ nav .about {
 	margin-bottom: 25px;
 }
 
-.cite_note {
-	display: block;
-	position: absolute;
-	bottom: 15px;
-	width: 100vw;
-	left: 0; 
-}
 
-/* step-indicator*/
 
-.step-icons {
-	position: fixed;
-	top: auto;
-	bottom: auto;
-}
 
-.step-icons div {
-	width: 60px;
-	height: 60px;
-  margin: 15px;
-	border-radius:99em;
-	display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.step-on {
-	background-color: #ffffff;
-}
-
-.step-off {
-	border: solid 2px #ffffff;
-}
-
-.step-icons p {
-	font-family: 'Arial';
-	font-weight: 900;
-	text-align: center;
-	margin: 0;
-}
-
-.step-on p {
-	color: #ff5d5d;
-}
 
 /* photos #new */
 
-header h3 {
-	font-size: 30px;
-	font-weight: 500;
-	/*letter-spacing: -1px;*/
-	text-shadow: 2px 3px 0 #000000;
-}
+
 
 header h4 {
 	font-size: 20px;
 	text-shadow: 2px 3px 0 #000000;
 }
 
-.upload-area {
-	margin-top: 2em; margin-bottom: 2em;
-	width: 230px; height: 230px;
-	border-radius: 4px;
-	background-color: #d8d8d8;
-	border: solid 1px #979797;
-	display:flex;
-  align-items:center;
-  justify-content:center;
-}
 
-.img-show {
-	margin-bottom: 2em;
-}
 
-.img-show img {
-	border-radius: 4px;
-}
+
 
 .fileUpload {
   position: relative;
@@ -215,83 +85,38 @@ header h4 {
 	font-size: 12px;
 }
 
-.fileUpload input.upload {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0);
-}
+
 
 /* photo #show */
-.option-area {
-	margin-top: 2em; margin-bottom: 2em;
-	display:flex;
-  align-items:center;
-  justify-content:center;
-}
+
 
 .option-area .option {
 	margin-left: 20px;
 }
 
 .photo_note {
-	display: none;
-  position: inherit;
-  top: 0;
-  left: 0;
-  margin-left: 20px;
+	
+   margin-left: 20px;
   /*padding-top: 30px;*/
   width: 280px;
   /*background-color: rgba(0,0,0,.3);*/
 }
 
-.photo_note.open {
-  display: block;
-}
 
 .photo_note .panel {
-  margin: 0 auto;
-  color: #9b9b9b;
   width: 95%;
   height: 180px;
-  background-color: #fff;
-  padding: 10px;
+  
 }
 
-.photo_note .cancel_note {
-	color: white;
-  float: right;
-  padding: 0;
-}
 
-.photo_note .cancel_note:hover {
-	text-decoration: none;
-}
+
+
 
 
 /* photo_asker #new */
-input#asker_email {
-	color: #eee;
-	background-color: rgba(0%,0%,0%, 0);
-	border: 0px;
-	border-bottom: 2px solid #ff5d5d;
-}
 
-input#asker_email:-webkit-autofill {
-	background-color: rgba(0%,0%,0%, 0) !important; 
-}
 
 /* --- fluid ---*/
 
-@media (max-width: 420px) {
-	#portfolio .container {
-		width: auto;
-	}
 }

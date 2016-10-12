@@ -1,9 +1,9 @@
+<%= render partial: 'step' %>
 <header>
 	<h3>可以搭什麼？</h3>
-  <h4>請選擇妳對這件衣服的搭配問題，<br>或告訴我們</h4>
+  <h4>請選擇妳對於這件衣服搭配上<br>
+的問題，或告訴我們</h4>
 </header>
-<%= render partial: 'step' %>
-
 <%= form_for [@photo, @request] do |f| %>
 	<section class="option-area center">
 		<div class="photo pull-left">
@@ -19,11 +19,11 @@
 					</label>
 				</div>
 			<% end %>
-			<div class="text-center", style="margin-top: 15px">
+			<div class="text-center">
 				<p class="btn btn-next btn-xs", id="create_note">我想自己描述</p>
 			</div>
 			<div class="radio text-left custom_opt", style="display: none">
-				<label style="margin-top: 15px">
+				<label>
 					<%= check_box_tag "note", true, false %>
 					<span id="note_of_photo"></span>
 				</label>
@@ -35,7 +35,7 @@
 			<br>
 			<%= text_area_tag :note, nil, autofocus: true, class: "panel", placeholder: "歡迎寫下任何這件衣服的穿搭問題。
 例如：還可以搭什麼、或是您將出席的場合、偏好的風格等。" %>
-			<p id="submit_note" class="btn btn-next pull-right" style="margin-right: 8px" >確定</p>
+			<p id="submit_note" class="btn btn-next pull-right clearfix">確定</p>
 		</div>
 	</section>
 	<%= render partial: 'action', locals: { f: f} %>
@@ -48,19 +48,26 @@
 	$('.step2').removeClass('step-off').addClass('step-on')
 
 	$('#create_note').click(function(){
+		$("nav").hide();
+		$('.step-icons').hide();
+		$('header').addClass('narrow');
 		$('.option').hide();
-		$('.photo_note').show();
 		$('.photo img').hide();
+		$('.photo_note').show();
 	});
 
 	$('#submit_note').click(function(){
 		var note = $('.panel').val();
 		if (note != "") {
 			// exchange view
+			$("nav").show();
+			$('.step-icons').show();
+	     $('header').removeClass('narrow');
 			$('.photo_note').hide();
 			$('.option').show();
 			$('#create_note').parent().hide();
 			$('.photo img').show();
+
 			// add note content
 			$('.custom_opt').show();
 			$('#note_of_photo').text(note);
@@ -74,6 +81,8 @@
 	$('.cancel_note').click(function(){
     $('.photo_note').hide();
     $('.option').show();
+    $('.photo img').show();
+    $('header').removeClass('narrow');
   });
 
 

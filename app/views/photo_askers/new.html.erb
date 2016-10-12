@@ -2,13 +2,13 @@
 
 <header>
 	<h3>最後</h3>
-	<h4>專屬妳的十種穿搭建議<br>要寄到…</h4>
+	<h4>專屬妳的十種穿搭建議要寄到…</h4>
 </header>
 
 <%= form_for [@photo, @asker] do |f| %>
 	<section class="option-area center">
 		<div class="photo ">
-			<%= image_tag @photo.img.url(:medium) %>
+			<%= image_tag @photo.img.url(:medium), height: "100px" %>
 			<%= hidden_field_tag :photo, @photo.id %>
 		</div>
 		<div class="option">
@@ -17,8 +17,11 @@
 	</section>
 	<div class="action">
 	  <div class="btn btn-disable">下一步</div>
-	  <%= f.submit "寄給我", class: "btn btn-next", style: "display: none"%>
+	  <%= f.submit "下一步", class: "btn btn-next", style: "display: none"%>
 	  <br>
+	  <p style="margin-top: 10px">
+      <%= link_to "我們保證不會寄給你垃圾信", policy_path, target: "_blank", class: "small", style:"color: #ccc;" %>
+    </p>
 </div>
 <% end %>
 <script>
