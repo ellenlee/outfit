@@ -146,22 +146,23 @@ header {
 
 /* photo #show */
 
-body#photos-show .photo {
+.photo {
   height: 230px;
-  width:50%;
+  /*width: 40%;*/
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
-body#photos-show .photo img {
+.photo img {
 	display: block !important ;
   margin-right: 30px;
-	width: 230px;
+	height: 230px;
+	width: auto !important ;
 }
 
 body#photos-show .frame {
-	width:50%;
+	/*width: 60%;*/
   height: 230px;
   position: relative;
   top: 30px;
@@ -170,7 +171,6 @@ body#photos-show .frame {
   /*justify-content: center;*/
   margin-left: 0;
 }
-
 
 .option-area .option {
 	margin-left: 36px;
@@ -184,33 +184,33 @@ body#photos-show label {
 	width: 183px;
 }
 
-.photo_note {
-  width: 95vw;
+body#photos-show .photo_note {
+  width: 320px;
 }
 
-.photo_note .panel {
-  height: 140px;  
+body#photos-show .cancel_note {
+	position: relative;
+	left: 15px;
+	top: 10px;
+}
+body#photos-show .photo_note .panel {
+  height: 230px;
+  width: 320px;  
 }
 
-p#submit_note {
-	/*bottom: 0px;*/
-	top: 0px;
-	right: 14px;
-
+body#photos-show #submit_note {
+	position: relative; 
+	top: -8px;
 }
+
+body#photos-show .action {
+	margin-top: 55px;
+}
+
 /* photo_asker #new */
 
-body#photo_askers-new .photo {
-  float: left;
-  height: 230px;
-}
-
-body#photo_askers-new img {
-	width: 230px;
-}
-
 input#asker_email {
-	width: 80%;
+	width: 230px;
 }
 
 body#photo_askers-new .option {

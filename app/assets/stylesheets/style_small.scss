@@ -324,12 +324,12 @@ body#photos-show .btn-next{
 	bottom: 30px;
 }
 
-.photo {
+body#photos-show .photo {
   float: left;
   height: 230px;
 }
 
-.photo img {
+body#photos-show .photo img {
 	width: 100px;
 	position: relative;
 	top: 8px;
