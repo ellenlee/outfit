@@ -6,37 +6,89 @@
 
 body {
 	background-image: image-url('bg_1920X1280_174K.jpg');
-	
 }
 
-
-
-
-
-input[type="checkbox"] {
-	border: solid 2px #ff5d5d;
-	background-color: yellow;
+nav {
+	height: 80px;
 }
 
+.container {
+	height: 85vh;
+	width: 100%;
+}
 
+/* action btn */
 
+.action .btn {
+	width: 250px;
+	height: 60px;
+	font-size: 30px;
+	font-weight: 800;
+}
 
-/* application */
+.btn-disable {
+	background-color: #ff5d5d;
+	opacity: 0.4;
+  filter: alpha(opacity=40);
+}
 
-nav #logo {
-	font-size: 25px;
+/* step-indicator*/
+
+.step-icons-small {
+	display: none;
+}
+
+.big-icon-frame {
+	position: absolute;
+	top: 63px;
+	left: 0px;
+	width: 100vw;
+	/*position: fixed;
+	top: 0;
+	left: 80px;
+	height: 100%;
+	width: 80px;*/
+	display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.step-icons-big div {
+	float: left;
+  margin: 0 15px;
+	width: 60px;
+	height: 60px;
+  /*margin: 20px 15px;*/
+	border-radius:99em;
+	display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.step-icons-big p {
+	font-family: 'Arial';
+	font-weight: 900;
+	font-size: 15px;
+	text-align: center;
+	margin: 0;
+}
+
+.step-off {
+   border: solid 3px #ffffff;
 }
 
 /* welcome#index */
+
+header {
+	margin-top: 90px;
+}
 
 #index-quote h4 {
 	font-size: 30px;
 }
 
 #index-quote small{
-	
 	font-size: 15px;
-
 	left: 170px;
 }
 
@@ -46,77 +98,116 @@ nav #logo {
 }
 
 #index-title {
-	font-size: 60px;
+	font-size: 65px;
 }
 
 #welcome-message h2 {
-	font-size: 45px;
+	font-size: 50px;
 }
 
 .action h5 {
 	font-size: 25px;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 }
 
+.icon {
+	margin-bottom: 5px;
+}
 
+.icon-app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.apple {
+	position: relative;
+	left: -6px;
+}
 
+.android {
+	position: relative;
+	right: -6px;
+}
 
 /* photos #new */
-
-
-
-header h4 {
-	font-size: 20px;
-	text-shadow: 2px 3px 0 #000000;
-}
-
-
-
-
 
 .fileUpload {
   position: relative;
   overflow: hidden;
   width: 118px;
+  height: 35px;
 }
 
 .fileUpload span {
 	font-size: 12px;
+	top: -50px;
 }
-
-
 
 /* photo #show */
 
+.photo {
+  height: 230px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo img {
+  margin-right: 30px;
+	width: 230px;
+}
+
+.frame {
+  height: 230px;
+  position: relative;
+  top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .option-area .option {
-	margin-left: 20px;
+	/*margin-top: 36px;*/
+}
+
+body#photos-show label {
+	padding-left: 0px;
+}
+
+#create_note {
+	width: 183px;
 }
 
 .photo_note {
-	
-   margin-left: 20px;
-  /*padding-top: 30px;*/
-  width: 280px;
-  /*background-color: rgba(0,0,0,.3);*/
+  width: 95vw;
 }
-
 
 .photo_note .panel {
-  width: 95%;
-  height: 180px;
-  
+  height: 140px;  
+}
+
+p#submit_note {
+	/*bottom: 0px;*/
+	top: 0px;
+	right: 14px;
+
+}
+/* photo_asker #new */
+
+body#photo_askers-new .photo {
+  float: left;
+  height: 230px;
+}
+.option {
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
 
-
-
-
-/* photo_asker #new */
-
-
-/* --- fluid ---*/
 
 }

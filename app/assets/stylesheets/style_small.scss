@@ -40,8 +40,8 @@ nav a#logo:hover {
 }
 
 .container {
-	height: 100vh;
-	width: 100vw;
+	height: 90vh;
+	width: 100%;
 }
 
 #main {
@@ -106,13 +106,15 @@ img {
 	color: white;
 	pointer-events: none;
 	width: 230px; 
-	/*opacity: 0.4;*/
-  /*filter: alpha(opacity=40);*/
 }
 
 /* step-indicator*/
 
-.step-icons {
+.big-icon-frame {
+	display: none;
+}
+
+.step-icons-small {
 	position: absolute;
 	top: 63px;
 	left: 0px;
@@ -122,7 +124,7 @@ img {
   justify-content:center;
 }
 
-.step-icons div {
+.step-icons-small div {
 	width: 43px;
 	height: 43px;
   margin: 0 15px;
@@ -140,7 +142,7 @@ img {
 	border: solid 2px #ffffff;
 }
 
-.step-icons p {
+.step-icons-small p {
 	font-family: 'Arial';
 	font-weight: 900;
 	font-size: 15px;
@@ -219,6 +221,13 @@ img {
   top: -2px;
 }
 
+.icon-app {
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 .icon-app .words{
 	width: 58px;
 	height: 18px;
@@ -231,12 +240,12 @@ img {
 }
 
 .apple {
-	position: absolute;
+	position: inherit;
 	bottom: 17px; left: 30px;
 }
 
 .android {
-	position: absolute;
+	position: inherit;
 	bottom: 17px; right: 30px;
 }
 
@@ -310,6 +319,12 @@ body#photos-show .btn-next{
 	position: inherit;
 	bottom: 30px;
 }
+
+.photo {
+  float: left;
+  height: 230px;
+}
+
 .photo img {
 	width: 100px;
 	position: relative;
@@ -376,6 +391,11 @@ body#photos-show .btn-next{
 
 body#photo_askers-new img {
 	margin-top: 25px;
+}
+
+body#photo_askers-new .photo {
+  float: none;
+  height: auto;
 }
 
 input#asker_email {

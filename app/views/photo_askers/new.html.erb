@@ -6,7 +6,7 @@
 </header>
 
 <%= form_for [@photo, @asker] do |f| %>
-	<section class="option-area center">
+	<section class="option-area center clearfix">
 		<div class="photo ">
 			<%= image_tag @photo.img.url(:medium), height: "100px" %>
 			<%= hidden_field_tag :photo, @photo.id %>

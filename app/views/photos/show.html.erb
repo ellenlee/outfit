@@ -6,11 +6,12 @@
 </header>
 <%= form_for [@photo, @request] do |f| %>
 	<section class="option-area center">
-		<div class="photo pull-left">
+		<div class="photo">
 			<%= image_tag @photo.img.url(:medium) %>
 			<%= hidden_field_tag :photo, @photo.id %>
 		</div>
-		<div class="option pull-left">
+		<div class="frame">
+			<div class="option">
 			<% @options.each do |opt| %>
 				<div class="radio text-left">
 					<label for="opt"+opt.id.to_s style="margin-bottom: 5px">
@@ -19,17 +20,17 @@
 					</label>
 				</div>
 			<% end %>
-			<div class="text-center">
-				<p class="btn btn-next btn-xs", id="create_note">我想自己描述</p>
-			</div>
 			<div class="radio text-left custom_opt", style="display: none">
 				<label>
 					<%= check_box_tag "note", true, false %>
 					<span id="note_of_photo"></span>
 				</label>
 			</div>
-
+			<div class="text-center">
+				<p class="btn btn-next btn-xs", id="create_note">我想自己描述</p>
+			</div>
 		</div>
+			
 		<div class="photo_note">
 			<a class="cancel_note btn">×</a>
 			<br>
@@ -37,6 +38,7 @@
 例如：還可以搭什麼、或是您將出席的場合、偏好的風格等。" %>
 			<p id="submit_note" class="btn btn-next pull-right clearfix">確定</p>
 		</div>
+			</div>
 	</section>
 	<%= render partial: 'action', locals: { f: f} %>
 <% end %>
@@ -48,9 +50,9 @@
 	$('.step2').removeClass('step-off').addClass('step-on')
 
 	$('#create_note').click(function(){
-		$("nav").hide();
-		$('.step-icons').hide();
-		$('header').addClass('narrow');
+		// $("nav").hide();
+		// $('.step-icons').hide();
+		// $('header').addClass('narrow');
 		$('.option').hide();
 		$('.photo img').hide();
 		$('.photo_note').show();
