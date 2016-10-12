@@ -310,11 +310,15 @@ header h4 {
 }
 
 .img-show {
+	height: 230px;
+	width: 230px;
+	overflow: auto;
 	margin-bottom: 22px;
 }
 
 body#photos-new .img-show img {
 	height: 230px;
+	width: auto;
 } 
 
 /* photos #show */
@@ -393,16 +397,21 @@ body#photos-show .photo img {
 
 /* photo_asker #new */
 
-body#photo_askers-new img {
+body#photo_askers-new .photo {
 	margin-top: 25px;
+	margin-bottom: 25px;
+  float: none;
+  height: 120px;
+  width: 100%;
+  overflow: auto;
+}
+
+body#photo_askers-new img {
 	height: 120px;
 	width: auto;
 }
 
-body#photo_askers-new .photo {
-  float: none;
-  height: auto;
-}
+
 
 input#asker_email {
 	color: #eee;

@@ -172,6 +172,10 @@ body#photos-show .frame {
   margin-left: 0;
 }
 
+.option-area {
+	display: flex;
+}
+
 .option-area .option {
 	margin-left: 36px;
 }
@@ -209,6 +213,17 @@ body#photos-show .action {
 
 /* photo_asker #new */
 
+body#photo_askers-new .photo {
+	width: auto;
+	height: 230px;
+	overflow: auto;
+}
+
+body#photo_askers-new img {
+	margin: 0px !important ;
+	width: auto;
+	height: 230px;
+}
 input#asker_email {
 	width: 230px;
 }
