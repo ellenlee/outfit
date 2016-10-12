@@ -146,30 +146,34 @@ header {
 
 /* photo #show */
 
-.photo {
+body#photos-show .photo {
   height: 230px;
+  width:50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-.photo img {
+body#photos-show .photo img {
+	display: block !important ;
   margin-right: 30px;
 	width: 230px;
 }
 
-.frame {
+body#photos-show .frame {
+	width:50%;
   height: 230px;
   position: relative;
   top: 30px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /*justify-content: center;*/
+  margin-left: 0;
 }
 
 
 .option-area .option {
-	/*margin-top: 36px;*/
+	margin-left: 36px;
 }
 
 body#photos-show label {
@@ -200,7 +204,16 @@ body#photo_askers-new .photo {
   float: left;
   height: 230px;
 }
-.option {
+
+body#photo_askers-new img {
+	width: 230px;
+}
+
+input#asker_email {
+	width: 80%;
+}
+
+body#photo_askers-new .option {
   height: 230px;
   display: flex;
   align-items: center;
