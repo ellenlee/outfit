@@ -313,6 +313,10 @@ header h4 {
 	margin-bottom: 22px;
 }
 
+body#photos-new .img-show img {
+	height: 230px;
+} 
+
 /* photos #show */
 
 body#photos-show .btn-next{
@@ -391,6 +395,8 @@ body#photos-show .btn-next{
 
 body#photo_askers-new img {
 	margin-top: 25px;
+	height: 120px;
+	width: auto;
 }
 
 body#photo_askers-new .photo {
