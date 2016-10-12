@@ -17,7 +17,7 @@
 	</section>
 	<div class="action">
 	  <div class="btn btn-disable">下一步</div>
-	  <%= f.submit "下一步", class: "btn btn-next", style: "display: none"%>
+	  <%= f.submit "寄給我", class: "btn btn-next", style: "display: none"%>
 	  <br>
 	  <p style="margin-top: 10px">
       <%= link_to "我們保證不會寄給你垃圾信", policy_path, target: "_blank", class: "small", style:"color: #ccc;" %>
@@ -28,15 +28,15 @@
 	$('.step2').removeClass('step-off').addClass('step-on')
 	$('.step3').removeClass('step-off').addClass('step-on')
 
-	$('.option input').keypress(function(event) {
-		if ($('#asker_email').val().indexOf("@") != -1 ){
+	$('.option input').keydown(function(event) {
+		if ($('#asker_email').val() != "" ){
 			$('.btn-disable').hide();
 	    $('.btn-next').show();
 			console.log("get email");
 		} else if (event.which == 13) {
 			$(".step-icons").removeClass("hidden").addClass('flex');
 			$('.btn-disable').hide();
-	    $('.btn-next').show();
+	    $('.btn-next').val("寄給我").show();
 		} else if ($('#asker_email').val().indexOf("@") == -1){
 			$('.btn-disable').show();
 	    $('.btn-next').hide();
