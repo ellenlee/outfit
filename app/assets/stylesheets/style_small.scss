@@ -3,11 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-	background-image: image-url('bg_16_9_66K.jpg');
+	background-image: image-url('bg_white_16_9.jpg');
 	background-position: center top;
 	background-attachment: fixed;
 	background-size: cover;
-	color: #eee;
+	color: #431026;
 	font-family: 'Arial';
 	/*padding-top: 40px;*/
 }
@@ -29,9 +29,9 @@ nav #logo {
 	position: absolute; 
 	top: 15px; left: 22px;
 	font-family: 'Arial Black';
-	text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5);
+	/*text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5);*/
 	font-weight: 900;
-	color: #ff5d5d;
+	color: #d23076;
 	font-size: 20px;
 }
 
@@ -90,12 +90,12 @@ img {
 }
 
 .btn-next {
-	background-color: #ff5d5d;
+	background-color: #d23076;
 	color: white;
 }
 
 .btn-cancel { 
-	color: #fff; 
+	color: #717171; 
 	font-size: 18px;
 	margin-left: 15px;
 	display: none;
@@ -151,7 +151,7 @@ img {
 }
 
 .step-on p {
-	color: #ff5d5d;
+	color: #d23076;
 }
 
 /* welcome #index */
@@ -177,9 +177,9 @@ img {
 #index-title {
 	font-family: 'Arial Black';
 	font-size: 35px;
-	color: #ff5d5d;
+	color: #d23076;
 	font-weight: bolder;
-	text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5);
+	/*text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5);*/
 	margin: 0.8em auto;
 	margin-bottom: 0px;
 }
@@ -187,7 +187,7 @@ img {
 #welcome-message h2 {
 	margin-top: 0px;
 	font-size: 25px;
-	text-shadow: 2px 3px 0 #000000;
+	/*text-shadow: 2px 3px 0 #000000;*/
 	font-weight: 900;
 	margin-bottom: 30px;
 }
@@ -208,7 +208,7 @@ img {
 	width: 125px;
 	height: 45px;
 	border-radius: 100px;
-	border: solid 1px #ffffff;
+	border: solid 1px #717171;
 	display:flex;
   align-items:center;
   justify-content:center;
@@ -236,7 +236,7 @@ img {
 	font-size: 13px;
 	letter-spacing: -0.2px;
 	text-align: center;
-	color: #ffffff;
+	color: #717171;
 }
 
 .apple {
@@ -263,7 +263,7 @@ header h3 {
 	font-size: 25px;
 	font-weight: 800;
 	/*letter-spacing: -1px;*/
-	text-shadow: 2px 3px 0 #000000;
+	/*text-shadow: 2px 3px 0 #000000;*/
 }
 
 header h4 {
@@ -414,10 +414,10 @@ body#photo_askers-new img {
 
 
 input#asker_email {
-	color: #eee;
+	color: #717171;
 	background-color: rgba(0%,0%,0%, 0);
 	border: 0px;
-	border-bottom: 2px solid #ff5d5d;
+	border-bottom: 2px solid #d23076;
 	margin-bottom: 30px;
 }
 
@@ -438,7 +438,7 @@ body#photo_askers-new .option-area .photo img {
 body#welcome-thanks header h4 {
 	font-size: 25px;
 	font-weight: 800;
-	text-shadow: 2px 3px 0 #000000;
+	/*text-shadow: 2px 3px 0 #000000;*/
 }
 
 div.about h4 {

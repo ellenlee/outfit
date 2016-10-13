@@ -5,7 +5,7 @@
 @media (min-width: 420px) {
 
 body {
-	background-image: image-url('bg_1920X1280_174K.jpg');
+	background-image: image-url('bg_white_1920X1280.jpg');
 }
 
 nav {
@@ -103,6 +103,7 @@ header {
 
 #welcome-message h2 {
 	font-size: 50px;
+	color: #431026;
 }
 
 .action h5 {
