@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  # devise_for :users
   devise_for :admins, :skip => [:registrations], controllers: { sessions: 'admins/sessions' }
 
  as :admin do
@@ -16,10 +16,10 @@ end
   root "welcome#index"
   get "/v1" => "welcome#v1"
 
-  resources :photos, except: :destroy do
-    resources :requests, controller: "photo_requests", except: :destroy
+  resources :photos, only: [:new, :create, :show] do
+    resources :requests, only: [:create], controller: "photo_requests", except: :destroy
     resources :notes, controller: "photo_notes", except: :destroy
-    resources :askers, controller: "photo_askers", except: :destroy
+    resources :askers, only: [:new, :create],  controller: "photo_askers", except: :destroy
   end 
   get "thanks" => "welcome#thanks"
   get "about" => "welcome#about"
