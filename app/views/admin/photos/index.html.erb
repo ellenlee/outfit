@@ -17,7 +17,7 @@
 				<td><%= check_box_tag "ids[]", photo.id, false %></td>
 				<td><%= photo.id %></td>
 				<td style="overflow: hidden"><%= link_to image_tag(photo.img.url(:medium), width: "100px"), photo.img.url, target: "_blank" %></td>
-				<td><%= photo.asker_email.split("@").first %></td>
+				<td><%= photo.asker_email %></td>
 				<td><%= photo.created_at.strftime('%Y-%m-%d %H:%M') %></td>
 				<td>
 					<ul>
