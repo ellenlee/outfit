@@ -12,7 +12,7 @@
 			<% @askers.each do |asker| %>
 				<tr>
 					<td><%= asker.id %></td>	
-					<td><%= asker.email.split("@").first %></td>
+					<td><%= asker.email %></td>
 					<td class="text-center"><%= asker.ask_count %></td>
 					<td>
 						<% asker.photos.each do |photo| %>
