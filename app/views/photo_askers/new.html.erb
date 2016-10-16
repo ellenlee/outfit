@@ -19,9 +19,8 @@
 	  <div class="btn btn-disable", style= "display: none">下一步</div>
 	  <%= f.submit "寄給我", class: "btn btn-next"%>
 	  <br>
-	  <p style="margin-top: 10px">
-      <%= link_to "我們保證不會寄給你垃圾信", policy_path, target: "_blank", class: "small", style:"color: #717171;" %>
-    </p>
+	  <a class="small" id="policy" style="margin-top: 10px; color: #717171;">
+       我們保證不會寄給你垃圾信</a>
 </div>
 <% end %>
 <script>
@@ -42,8 +41,13 @@
 	    $('.btn-next').hide();
 			console.log("not finish input");
 		} ;
-	}); 
+	});
 
+</script>
 
-
+<script>
+  $('#policy').click(function(){
+    $('.about_modal').removeClass('hidden');
+    console.log("open about");
+  });
 </script>
