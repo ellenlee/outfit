@@ -93,27 +93,8 @@
   		</div>
 		</div>
 
-		<div class="about_modal text-left hidden">
-			<a class="cancel_btn btn">×</a>
-			<div class="about_panel">
-				<h4>【關於outfit hunt】</h4>
-				outfit hunt是一個讓妳用現有衣服找穿搭的實用APP，如果妳有一件／很多件不知該怎麼搭配的衣服，outfit hunt透過精準的服裝掃描分析技術搭配最流行、最潮的穿搭達人組合，將會幫妳解決不知該搭什麼的煩腦，用現有的衣服就能讓穿搭天天都不無聊。
+		<%= render partial: "layouts/about"%>
 
-			</div>
-		</div>
-
-		<script>
-			$('#about').click(function(){
-		    $('.about_modal').removeClass('hidden');
-				console.log("open about");
-		  });
-
-		  $('.cancel_btn').click(function(){
-		  	$('.about_modal').addClass('hidden');
-				console.log("close about");
-		  });
-
-		</script>
 
   </body>
 </html>

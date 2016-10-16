@@ -18,7 +18,7 @@ nav {
 }
 
 nav #about {
-	position: absolute; 
+	position: absolute;
 	top:15px; right: 15px;
 	background-color: #f5a623;
 	width: 70px; height: 25px;
@@ -26,10 +26,8 @@ nav #about {
 	padding:0;
 }
 
-
-
 nav #logo {
-	position: absolute; 
+	position: absolute;
 	top: 15px; left: 22px;
 	font-family: 'Arial Black';
 	/*text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5);*/
@@ -97,8 +95,8 @@ img {
 	color: white;
 }
 
-.btn-cancel { 
-	color: #717171; 
+.btn-cancel {
+	color: #717171;
 	font-size: 18px;
 	margin-left: 15px;
 	display: none;
@@ -108,7 +106,7 @@ img {
 	background-color: #d8d8d8;
 	color: white;
 	pointer-events: none;
-	width: 230px; 
+	width: 230px;
 }
 
 /* step-indicator*/
@@ -204,7 +202,7 @@ img {
 	position: absolute;
 	bottom: 75px;
 	width: 100vw;
-	left: 0; 
+	left: 0;
 }
 
 .icon-border {
@@ -322,7 +320,7 @@ header h4 {
 body#photos-new .img-show img {
 	height: 230px;
 	width: auto;
-} 
+}
 
 /* photos #show */
 
@@ -425,7 +423,7 @@ input#asker_email {
 }
 
 input#asker_email:-webkit-autofill {
-	background-color: rgba(0%,0%,0%, 0) !important; 
+	background-color: rgba(0%,0%,0%, 0) !important;
 }
 
 .option-area {
@@ -447,53 +445,32 @@ body#welcome-thanks header h4 {
 /* about */
 
 .about_modal {
-	
 	position: fixed;
   top: 0;
   left: 0;
-  padding-top: 100px;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0,0,0,.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cancel_btn {
-  float: right;
+  position: absolute;
+  top: 8%;
+  right: 2%;
+  color: #333;
   font-size: 26px;
   font-weight: 900;
-  position: relative;
-  top: -5px;
-  right: 30px;
-  color: #333;
 }
+
 .about_modal .about_panel {
-	padding: 30px 15px ;
+  overflow: scroll;
+	padding: 20px 15px ;
   margin: 0 auto;
-  width: 80%;
-  height: auto;
+  width: 90%;
+  height: 80%;
   background-color: #fff;
 }
 
-
-/*
-.photo_note .cancel_note {
-	color: white;
-  float: right;
-	font-size: 30px;
-	font-weight: 900;
-  padding: 0;
-  margin: 0 auto;
-}
-
-.photo_note .cancel_note:hover {
-	text-decoration: none;
-}*/
-/*div.about h4 {
-	margin-top: 50px;
-}
-
-div.about {
-	font-size: 18px;
-	font-weight: 100;
-}
-*/
