@@ -1,17 +1,20 @@
 <h2>上傳者一覽</h2>
 
+<%= form_tag bulk_update_admin_askers_path do %>
 	<div class="table-responsive" style="overflow-x: visible;">
 		<table class="table table-condensed table-bordered">
 			<tr>
+				<td></td>
 				<td>#</td>
 				<td>名稱</td>
 				<td>上傳數</td>
 				<td>照片</td>
-				<td>備註</td>	
+				<td>來源</td>
 			</tr>
 			<% @askers.each do |asker| %>
 				<tr>
-					<td><%= asker.id %></td>	
+					<td><%= check_box_tag "ids[]", asker.id, false %>
+					<td><%= asker.id %></td>
 					<td><%= asker.email %></td>
 					<td class="text-center"><%= asker.ask_count %></td>
 					<td>
@@ -19,9 +22,14 @@
 							<%= image_tag photo.img(:thumb) %>
 						<% end %>
 					</td>
-					<td></td>
+					<td><%= asker.note %></td>
 				</tr>
 			<% end %>
 		</table>
 	</div>
+
+	<%= text_field_tag :note %>
+	<%= submit_tag "create note" %>
+	<%= submit_tag "Delete", data: {comfirm: "Are you sure? "} %>
+<% end %>
 <br><br><br><br>

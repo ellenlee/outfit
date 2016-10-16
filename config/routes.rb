@@ -20,7 +20,7 @@ end
     resources :requests, only: [:create], controller: "photo_requests", except: :destroy
     resources :notes, controller: "photo_notes", except: :destroy
     resources :askers, only: [:new, :create],  controller: "photo_askers", except: :destroy
-  end 
+  end
   get "thanks" => "welcome#thanks"
   get "about" => "welcome#about"
   get "policy" => "welcome#policy"
@@ -28,7 +28,9 @@ end
   namespace :admin do
   	root "photos#index"
     resources :admins, only: [:index, :create, :destroy]
-    resources :askers
+    resources :askers do
+      post :bulk_update, on: :collection
+    end
     resources :photos do
       collection do
         post :bulk_update

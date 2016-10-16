@@ -10,7 +10,8 @@
 				<td>上傳者</td>
 				<td>時間</td>
 				<td>option</td>
-				<td>note</td>	
+				<td>備註</td>
+				<td>來源</td>
 			</tr>
 			<% @photos.each do |photo| %>
 			<tr>
@@ -26,6 +27,7 @@
 						<% end %>
 					</ul>
 				<td><%= photo.note_content %></td>
+				<td><%= photo.asker_note %></td>
 			</tr>
 			<% end %>
 		</table>

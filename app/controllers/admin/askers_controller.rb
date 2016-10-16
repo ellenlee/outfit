@@ -3,6 +3,22 @@ class Admin::AskersController < Admin::AdminController
 		@askers = Asker.all
 	end
 
+  def bulk_update
 
+    ids = Array(params[:ids])
+    askers = ids.map{ |i| Asker.find_by_id(i) }.compact
+
+    if params[:commit] == "create note"
+      askers.each do |asker|
+        asker.update(note: params[:note])
+      end
+    end
+
+    if params[:commit] == "Delete"
+      askers.each { |asker| asker.destroy }
+    end
+
+    redirect_to admin_askers_path, alert: "上傳者已刪除"
+  end
 
 end
