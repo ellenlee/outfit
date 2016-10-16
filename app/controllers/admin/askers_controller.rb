@@ -18,7 +18,7 @@ class Admin::AskersController < Admin::AdminController
       askers.each { |asker| asker.destroy }
     end
 
-    redirect_to admin_askers_path, alert: "上傳者已刪除"
+    redirect_to admin_askers_path, alert: "update"
   end
 
 end
