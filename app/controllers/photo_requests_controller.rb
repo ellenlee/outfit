@@ -6,7 +6,6 @@ class PhotoRequestsController < ApplicationController
 		@photo = Photo.find(params[:photo])
 		@asker = @photo.asker
 
-		byebug
 		@note = @photo.build_note( content: params[:note])
 		@note.save
 
