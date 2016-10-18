@@ -7,16 +7,16 @@
 <section class="thanks-notes">
   <h4>
     謝謝<br>
+    Outfit Hunt 團隊將編製<br>
     屬於妳的穿搭日報<br>
-    將寄送至<br>
+    寄送至<br>
   </h4>
   <h4><%= @asker.email %></h4>
-  <p>by Outfit Hunt</p>
 </section>
 
 <div style="margin-top: 40px;">
   <%= link_to "繼續上傳衣服", new_asker_photo_path(@asker), class: "btn btn-next" %>
-  <%= link_to image_tag("fb-link.png", style: "width: 100px; border: 1px solid #ccc"), "https://www.facebook.com/Outfit-Hunt-175436486240381/",  target: "_blank" %>
+  <%= link_to "FB粉絲頁", "https://www.facebook.com/Outfit-Hunt-175436486240381/", target: "_blank",  class: "btn btn-next", style: "background-color: #273884" %>
 </div>
 
 <script>
