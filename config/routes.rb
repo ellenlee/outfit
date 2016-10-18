@@ -14,7 +14,10 @@ end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root "welcome#index"
-  get "/v1" => "welcome#v1"
+
+  resources :askers, only: [:new, :create] do
+    resources :photos, only: [:new, :create, :show]
+  end
 
   resources :photos, only: [:new, :create, :show] do
     resources :requests, only: [:create], controller: "photo_requests", except: :destroy

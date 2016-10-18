@@ -1,0 +1,58 @@
+.icon-area {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  padding-bottom: 10px
+}
+
+
+.cite_note {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 10px;
+}
+
+.icon-app {
+  /*width: 100vw;*/
+  /*position: absolute;*/
+  /*bottom: 0;*/
+  /*left: 0;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-border {
+  width: 125px;
+  /*height: 45px;*/
+  /*border-radius: 100px;*/
+  /*border: solid 1px #717171;*/
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.line {
+  width: 1px;
+  height: 18px;
+  background-color: #979797;
+  /*border: solid 1px #979797;*/
+}
+
+.app-logo {
+  width: 17px; height: 19px;
+  margin-right: 5px;
+  position: relative;
+}
+
+.icon-app .words{
+  width: 58px;
+  height: 18px;
+  font-family: 'Helvetica', 'Calibri Light', 'Arial';
+  font-weight: 200;
+  font-size: 13px;
+  letter-spacing: -0.2px;
+  text-align: center;
+  color: #717171;
+}

@@ -158,8 +158,8 @@ img {
 /* welcome #index */
 
 #index-quote {
-	margin-top: 40px;
-	margin-bottom: 30px;
+	margin-top: 30px;
+	margin-bottom: 20px;
 }
 
 #index-quote h4 {
@@ -180,9 +180,9 @@ img {
 	font-size: 35px;
 	color: #d23076;
 	font-weight: bolder;
-	/*text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5);*/
 	margin: 0.8em auto;
 	margin-bottom: 0px;
+  text-shadow: 2px 2px 0 rgba(67, 16, 38, 0.4);
 }
 
 #welcome-message h2 {
@@ -190,66 +190,15 @@ img {
 	font-size: 25px;
 	/*text-shadow: 2px 3px 0 #000000;*/
 	font-weight: 900;
-	margin-bottom: 30px;
+	margin-bottom: 3px;
 }
 
-.action h5 {
+#welcome-message h5 {
 	font-size: 20px;
+  font-weight: 600;
+  color: #431026;
+  margin-top: 0px;
 }
-
-.cite_note {
-	display: block;
-	position: absolute;
-	bottom: 75px;
-	width: 100vw;
-	left: 0;
-}
-
-.icon-border {
-	width: 125px;
-	height: 45px;
-	border-radius: 100px;
-	border: solid 1px #717171;
-	display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.app-logo {
-	width: 26px; height: 28px;
-  margin-right: 5px;
-  position: relative;
-  top: -2px;
-}
-
-.icon-app {
-  width: 100vw;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.icon-app .words{
-	width: 58px;
-	height: 18px;
-	font-family: 'Helvetica', 'Calibri Light', 'Arial';
-	font-weight: 200;
-	font-size: 13px;
-	letter-spacing: -0.2px;
-	text-align: center;
-	color: #717171;
-}
-
-.apple {
-	position: inherit;
-	bottom: 17px; left: 30px;
-}
-
-.android {
-	position: inherit;
-	bottom: 17px; right: 30px;
-}
-
 /* photos #new */
 
 header {
@@ -318,8 +267,11 @@ header h4 {
 }
 
 body#photos-new .img-show img {
-	height: 230px;
-	width: auto;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+
 }
 
 /* photos #show */
@@ -407,32 +359,14 @@ body#photo_askers-new .photo {
   overflow: auto;
 }
 
+body#photo_askers-new .option-area .photo img {
+  top: 0px;
+  margin-bottom: 30px;
+}
+
 body#photo_askers-new img {
 	height: 120px;
 	width: auto;
-}
-
-
-
-input#asker_email {
-	color: #717171;
-	background-color: rgba(0%,0%,0%, 0);
-	border: 0px;
-	border-bottom: 2px solid #d23076;
-	margin-bottom: 30px;
-}
-
-input#asker_email:-webkit-autofill {
-	background-color: rgba(0%,0%,0%, 0) !important;
-}
-
-.option-area {
-	display: block;
-}
-
-body#photo_askers-new .option-area .photo img {
-	top: 0px;
-	margin-bottom: 30px;
 }
 
 /* thanks */
@@ -440,6 +374,32 @@ body#welcome-thanks header h4 {
 	font-size: 25px;
 	font-weight: 800;
 	/*text-shadow: 2px 3px 0 #000000;*/
+}
+
+.thanks {
+  color: #d23076;
+}
+
+.thanks h1 {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 0px;
+}
+
+.thanks h4 {
+  margin-top: 0px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.thanks-notes {
+  margin-top: 25px;
+}
+
+.thanks-notes h4 {
+  font-size: 18px;
+  line-height: 132%;
+  font-weight: 600;
 }
 
 /* about */
@@ -473,4 +433,3 @@ body#welcome-thanks header h4 {
   height: 80%;
   background-color: #fff;
 }
-

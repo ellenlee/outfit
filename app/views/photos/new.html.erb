@@ -6,9 +6,9 @@
 </header>
 
 
-<%= form_for @photo do |f| %>
+<%= form_for [@asker, @photo] do |f| %>
 	<div class="center">
-		<div class="img-show" style="display: none">
+		<div class="img-show center" style="display: none">
 			<img id="thumbnil" src="" alt="image"/>
 		</div>
 
@@ -19,12 +19,12 @@
         <span>上傳照片</span>
       </div>
 		</div>
-		
+
 	</div>
 
   <%= render partial: 'action', locals: { f: f} %>
 <% end %>
 
 <script>
-  
+
 </script>
