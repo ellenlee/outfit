@@ -3,7 +3,6 @@ class AskersController < ApplicationController
 
   def create
     @asker = Asker.find_or_initialize_by(asker_params)
-
     if @asker.save
       redirect_to new_asker_photo_path(@asker)
     else
