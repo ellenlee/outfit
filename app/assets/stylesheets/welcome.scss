@@ -29,11 +29,11 @@
 }
 
 #welcome-message h2 {
-  margin-top: 0px;
+  margin-top: 3px;
   font-size: 25px;
   /*text-shadow: 2px 3px 0 #000000;*/
   font-weight: 900;
-  margin-bottom: 10px;
+  margin-bottom: 23px;
 }
 
 #welcome-message h3 {
@@ -43,10 +43,51 @@
   margin-top: 0px;
 }
 
+/* step- introduction */
+
+#step-introduction {
+  padding: 20px;
+  width: 100vw;
+  background-color: rgba(67, 16, 38, 0.1);
+}
+
+body#welcome-index .step-icons-all {
+  display: flex;
+  justify-content: center;
+}
+
+#step-introduction h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.step-icons-all .step-icon {
+  background-color: #fff;
+  width: 43px;
+  height: 43px;
+  margin: 10px 15px;
+  border-radius:99em;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.step-icon span {
+  color: #d23076;
+  font-family: 'Arial';
+  font-weight: 900;
+  font-size: 15px;
+  text-align: center;
+  margin: 0;
+}
+
+/* email bar */
+
 .info-area {
   display: flex;
   justify-content: center;
-  align-items: flex-start;;
+  align-items: center;
 }
 
 .service-info {

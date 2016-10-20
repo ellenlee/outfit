@@ -2,43 +2,25 @@
 	$('#logo').hide();
 </script>
 
+<div id="index-quote">
+	<h4>“閒置衣物是女人衣櫥最大的敵人”</h4>
+	<small>by R. LaBerrari</small>
+</div>
+
 <section id="welcome-message">
 	<h1 id="index-title">OUTFIT HUNT</h1>
 	<h2>發現衣服更多實用穿法</h2>
-</section>
-
-<section id="step-introduction">
-  <h3>三步驟  取得穿搭建議</h3>
-  <div class="step-icons-all">
-    <div class="all-steps">
-      <div class="step-icon">
-        <span>1</span>
-      </div>
-      <span>上傳衣服</span>
-    </div>
-    <div class="all-steps">
-      <div class="step-icon">
-        <span>2</span>
-      </div>
-      <span>送出問題</span>
-    </div>
-    <div class="all-steps">
-      <div class="step-icon">
-        <span>3</span>
-      </div>
-      <span>收到穿搭</span>
-    </div>
-  </div>
+	<h3>現在免費試用</h3>
 </section>
 
 <section class="email-area">
   <%= form_for @asker do |f| %>
     <section class="input-area">
-      <h4>↓ 開始免費試用 ↓</h4>
       <div class="email-bar">
         <div class="icon-person"><%= image_tag image_url('icon-person.png')%></div>
         <%= f.email_field :email, autofocus: true, placeholder: "E-mail", class: "form-control" %>
       </div>
+      <p class="small text-right">*請使用email啟動試用服務</p>
     </section>
     <div class="action">
       <%= f.submit "立刻免費試用", class: "start btn btn-next"%>
