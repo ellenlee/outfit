@@ -15,7 +15,7 @@
 		<div class="upload-area">
 			<%= render partial: 'form_errors', locals: { :f => f } %>
       <div class="fileUpload btn btn-next">
-        <%= f.file_field :img, accept: "image/*", capture:"camera", onchange: "showMyImage(this)", class: "upload" %>
+        <%= f.file_field :img, accept: "image/*", onchange: "showMyImage(this)", class: "upload" %>
         <span>上傳照片</span>
       </div>
 		</div>
