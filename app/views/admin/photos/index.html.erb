@@ -10,6 +10,7 @@
 				<td>#</td>
 				<td>照片</td>
 				<td>上傳者</td>
+				<td>上傳者ID</td>
 				<td>時間</td>
 				<td>option</td>
 				<td>備註</td>
@@ -21,6 +22,7 @@
 				<td><%= photo.id %></td>
 				<td style="overflow: hidden"><%= link_to image_tag(photo.img.url(:medium), width: "100px"), photo.img.url, target: "_blank" %></td>
 				<td><%= photo.asker_email %></td>
+				<td><%= photo.asker.id %></td>
 				<td><%= photo.created_at.strftime('%Y-%m-%d %H:%M') %></td>
 				<td>
 					<ul>
