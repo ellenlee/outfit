@@ -38,6 +38,9 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    airbrake (5.6.0)
+      airbrake-ruby (~> 1.6)
+    airbrake-ruby (1.6.0)
     airbrussh (1.1.1)
       sshkit (>= 1.6.1, != 1.7.0)
     arel (7.1.2)
@@ -197,6 +200,8 @@ GEM
       ffi (>= 0.5.0)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
+    rollbar (2.13.3)
+      multi_json
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
@@ -272,6 +277,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  airbrake (~> 5.6)
   bootstrap-sass (~> 3.3.6)
   byebug
   capistrano-passenger
@@ -290,6 +296,7 @@ DEPENDENCIES
   rails (~> 5.0.0, >= 5.0.0.1)
   rails-erd
   rails-i18n
+  rollbar
   rspec-rails
   sass-rails (~> 5.0)
   simple_form

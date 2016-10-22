@@ -106,16 +106,6 @@
 		</nav>
 
 	  <!-- 警告訊息 -->
-	  <% if flash[:notice].present? %>
-	    <div class="alert alert-success" role="alert">
-	      <%= flash[:notice]%>
-	    </div>
-	  <% elsif flash[:alert].present? %>
-	    <div class="alert alert-danger" role="alert">
-	      <%= flash[:alert]%>
-	    </div>
-	  <% end %>
-
 		<div class="container">
 			<div id="main">
 		    <%= yield %>

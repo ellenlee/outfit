@@ -17,11 +17,23 @@
       <div class="fileUpload btn btn-next">
         <%= f.file_field :img, accept: "image/*", onchange: "showMyImage(this)", class: "upload" %>
         <span>上傳照片</span>
+        <% if flash[:notice].present? %>
+          <div class="alert alert-success" role="alert">
+            <%= flash[:notice]%>
+          </div>
+        <% elsif flash[:alert].present? %>
+          <div class="alert alert-danger" role="alert">
+            <%= flash[:alert]%>
+          </div>
+        <% end %>
       </div>
 		</div>
 
 	</div>
 
-  <%= render partial: 'action', locals: { f: f} %>
+  <div class="action">
+    <%= hidden_field_tag :asker_id, params[:asker_id] %>
+    <%= render partial: 'action', locals: { f: f} %>
+  </div>
 <% end %>
 

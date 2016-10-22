@@ -201,6 +201,7 @@ header h4 {
 	position: relative;
 	top: -64px; z-index: 1;
 	line-height: 60px;
+  /*display: none;*/
 }
 
 .fileUpload input.upload {
@@ -214,6 +215,7 @@ header h4 {
     cursor: pointer;
     opacity: 0;
     filter: alpha(opacity=0);
+    /*border: 1px solid yellow;*/
 }
 
 .img-show {
