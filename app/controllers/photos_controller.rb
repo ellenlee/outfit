@@ -9,7 +9,7 @@ class PhotosController < ApplicationController
 		set_asker
 		@photo = @asker.photos.new(photo_params)
 		if @photo.save
-			redirect_to asker_photo_path(@asker, @photo)
+			redirect_to asker_photo_path(@asker, @photo, page: 'note')
 		else
 			redirect_to new_asker_photo_path(@asker), alert: "有點問題⋯⋯只能上傳圖片哦！"
 		end
