@@ -6,7 +6,7 @@
 </header>
 
 
-<%= form_for [@asker, @photo] do |f| %>
+<%= form_for [@asker, @photo], html: { multipart: true } do |f| %>
 	<div class="center">
 		<div class="img-show center" style="display: none">
 			<img id="thumbnil" src="" alt="image"/>

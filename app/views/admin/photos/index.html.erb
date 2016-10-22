@@ -4,6 +4,7 @@
 	<%= submit_tag "Delete", data: {comfirm: "Are you sure? "} %>
 </div>
 	<div class="table-responsive" style="overflow-x: visible;">
+		<%= paginate @photos %>
 		<table class="table table-condensed table-bordered">
 			<tr>
 				<td></td>

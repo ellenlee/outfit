@@ -1,6 +1,6 @@
 class Admin::AskersController < Admin::AdminController
 	def index
-		@askers = Asker.all
+		@askers = Asker.all.order(id: :desc).page(params[:page]).per(20)
 	end
 
   def bulk_update

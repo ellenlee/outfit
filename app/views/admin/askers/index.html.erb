@@ -1,15 +1,13 @@
 <%= form_tag bulk_update_admin_askers_path do %>
 <div style="background-color: #fff; width: 100%; position: fixed; top:30px; left:0; ">
 	<h2>上傳者一覽</h2>
-
-<%= text_field_tag :note %>
+	<%= text_field_tag :note %>
 	<%= submit_tag "create note" %>
 	<%= submit_tag "Delete", data: {comfirm: "Are you sure? "} %>
 </div>
 
-
-
 	<div class="table-responsive" style="overflow-x: visible;">
+		<%= paginate @askers %>
 		<table class="table table-condensed table-bordered">
 			<tr>
 				<td></td>
