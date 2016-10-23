@@ -15,7 +15,7 @@
 		<div class="upload-area">
 			<%= render partial: 'form_errors', locals: { :f => f } %>
       <div class="fileUpload btn btn-next">
-        <%= f.file_field :img, multiple: true, accept: "image/*", onchange: "showMyImage(this)", name: 'photo[img]', class: "upload" %>
+        <%= f.file_field :img, multiple: true, onchange: "showMyImage(this)", name: 'photo[img]', class: "upload" %>
         <span>上傳照片</span>
         <% if flash[:notice].present? %>
           <div class="alert alert-success" role="alert">
