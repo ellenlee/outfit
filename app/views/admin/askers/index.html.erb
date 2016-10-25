@@ -13,6 +13,7 @@
 				<td></td>
 				<td>#</td>
 				<td>名稱</td>
+				<td>註冊時間</td>
 				<td>上傳數</td>
 				<td>照片</td>
 				<td>來源</td>
@@ -22,6 +23,7 @@
 					<td><%= check_box_tag "ids[]", asker.id, false %>
 					<td><%= asker.id %></td>
 					<td><%= asker.email %></td>
+					<td><%= asker.created_at.strftime('%Y-%m-%d %H:%M')%></td>
 					<td class="text-center"><%= asker.ask_count %></td>
 					<td>
 						<% asker.photos.each do |photo| %>
